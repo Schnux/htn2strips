@@ -42,9 +42,7 @@
 
 (defun simple-forward-planner (state goal &optional plan-so-far)
   (if (subsetp goal state :test #'equal) ; reach goal state?
-      (progn 
-        (format t "goal = ~a" state)
-        plan-so-far)
+      plan-so-far
       (loop for a in (remove-if-not #'(lambda (x) (action-admissible? state x)) *robot-actions*)
         finally (return nil) ; return nil=no plan when no action leads to goal
         do
@@ -56,6 +54,8 @@
           (when trial
             (format t "reached goal: ~a" state)
             (return-from simple-forward-planner plan-candidate))))))
+
+
 
 ;; non-determinism using throw-catch
 (defparameter +failure+ (gensym))
@@ -72,3 +72,14 @@
          (let ((,result (catch ',+try-other+ ,@code)))
            (unless (eql ,result +failure+)
              (return ,result)))))))
+
+#|
+(let ((lst (loop for i from 1 to 100 collect i)))
+    (choose a lst
+      (choose b lst
+        (choose c lst 
+          (if (= (+ (* a a) (* b b)) 
+                 (* c c))
+              (list a b c)
+              (fail))))))
+|#
