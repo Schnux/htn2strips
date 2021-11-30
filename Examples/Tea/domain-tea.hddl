@@ -1,0 +1,64 @@
+(define (domain tea)
+	(:requirements :negative-preconditions :typing)
+	(:types cup location kettle water teabag - object)
+	(:predicates
+		(hot ?w - water)
+		(is-in ?o1 - object ?o2 - object)
+		(at-location ?lk - location)
+		(in-hand ?o - object))
+	(:task brew-tea :parameters (?lk - location ?c - cup ?k - kettle ?w - water ?t - teabag))
+	(:task boil-water :parameters (?k - kettle ?w - water))
+
+	(:method m-brew-tea
+		:parameters (?c - cup
+			?lk - location
+			?k - kettle 
+			?w - water
+			?t - teabag)
+		:task (brew-tea ?lk ?c ?k ?w ?t)
+		:subtasks (and
+			(get-to ?lk)
+			(t1 (boil-water ?k ?w))
+			(pick-up ?t)
+			(put-in ?t ?c)
+			(t2 (pour-water ?w ?c ?k)))
+		:ordering (and
+			(t1 < t2)))
+
+	(:method m-boil-water
+		:parameters (?k - kettle ?w - water)
+		:task (boil-water ?k ?w)
+		:subtasks (and
+			(pick-up ?w)
+			(put-in ?w ?k)
+			(turn-on ?k)
+		))
+
+	(:action get-to 
+		:parameters (?lk - location)
+		:precondition (not (at-location ?lk))
+		:effect (at-location ?lk))
+
+	(:action pick-up
+		:parameters (?o - object)
+		:precondition (not (in-hand ?o))
+		:effect (in-hand ?o))
+
+	(:action turn-on
+		:parameters (?k - kettle ?w - water)
+		:precondition (and 
+			(is-in ?w ?k)
+		)
+		:effect (and 
+			(hot ?w)
+		))
+
+	(:action put-in
+		:parameters (?o1 ?o2 - object)
+		:precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))
+		:effect (is-in ?o1 ?o2))
+
+	(:action pour-water
+		:parameters (?w - water ?c - cup ?k - kettle)
+		:precondition (and (hot ?w) (in-hand ?k))
+		:effect (is-in ?w ?c)))
