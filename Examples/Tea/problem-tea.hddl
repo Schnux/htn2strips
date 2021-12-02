@@ -1,9 +1,6 @@
 (define (problem p)
-	(:domain tea)
-	(:objects c - cup lk - location k - kettle w - water t - teabag)
-	(:htn
-	:tasks (brew-tea lk c k w t)
-	:ordering ()
-	:constraints ())
-	(:init))
-
+    (:domain tea)
+    (:objects c - cup lk - location k - kettle w - water t - teabag)
+    (:htn
+     :tasks (brew-tea lk c k w t))
+    (:init))
