@@ -1,0 +1,33 @@
+Initial state: 	
+Goal state: 	Brewedtea(kitchen,cup,kettle,water,tea)
+
+Actions:
+		Brewtea(L,C,K,W,T)
+		Preconditions: Atlocation(L),Boiledwater(W),Isin(T,C),Isin(W,C)
+		Postconditions: Brewedtea(L,C,K,W,T)
+		
+		Boilwater(K,W,L)
+		Preconditions: Isin(W,kettle),Hot(W)
+		Postconditions:Boiledwater(W)
+		
+		Getto(L)
+		Preconditions: !Atlocation(L)
+		Postconditions: Atlocation(L)
+	
+		Pickup(O, L)
+		Preconditions: !Inhand(O), Atlocation(L)
+		Postconditions: Inhand(O)
+	
+		Turnon(K, W)
+		Preconditions: Isin(W, K)
+		Postconditions: Hot(W)
+	
+		Putin(O1, O2)
+		Preconditions: !Isin(O1, O2), Inhand(O1)
+		Postconditions: Isin(O1, O2), !Inhand(O1)
+	
+		Pourwater(W, C, K)
+		Preconditions: Hot(W), Inhand(K)
+		Postconditions: Isin(W, C)
+	
+	
