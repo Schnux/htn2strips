@@ -1,0 +1,3655 @@
+
+CL-USER> (htn2strips "git/input/domain.hddl" "git/input/domain.hddl")
+(htn2strips "git/input/domain.hddl" "git/input/domain.hddl")
+CL-USER> 
+(htn2strips "input/domain.hddl" "input/domain.hddl")
+(htn2strips "input/domain.hddl" "input/domain.hddl")
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN SPLIT
+;     (SETQ BRACKETS 0)
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::BRACKETS
+
+;     (SETQ I 0)
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::I
+
+;     (- (LENGTH INLIST) J)
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::J
+; 
+; compilation unit finished
+;   Undefined variables:
+;     BRACKETS I J
+;   caught 3 WARNING conditions
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(htn2strips "git/input/domain.hddl" "git/input/domain.hddl")
+(htn2strips "git/input/domain.hddl" "git/input/domain.hddl")
+CL-USER> 
+(htn2strips "input/domain.hddl" "input/domain.hddl")
+(htn2strips "input/domain.hddl" "input/domain.hddl")
+NIL
+
+CL-USER> (split "(:init" problem '())
+(split "(:init" problem '())
+NIL
+
+CL-USER> brackets
+brackets
+0
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN SPLIT
+;     (- (LENGTH INLIST) J)
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::J
+; 
+; compilation unit finished
+;   Undefined variable:
+;     J
+;   caught 1 WARNING condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> brackets
+brackets
+0
+
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+NIL
+
+CL-USER> brackets
+brackets
+1
+
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+NIL
+
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+NIL
+
+CL-USER> (print 3)
+(print 3)
+
+3 
+3
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN SPLIT
+;     (SETQ BRACKETS)
+; 
+; caught ERROR:
+;   odd number of args to SETQ: (SETQ BRACKETS)
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN SPLIT
+;     (- (LENGTH INLIST) J)
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::J
+; 
+; compilation unit finished
+;   Undefined variable:
+;     J
+;   caught 1 ERROR condition
+;   caught 1 WARNING condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN SPLIT
+;     (SETQ BRACKETS)
+; 
+; caught ERROR:
+;   odd number of args to SETQ: (SETQ BRACKETS)
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN SPLIT
+;     (- (LENGTH INLIST) J)
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::J
+; 
+; compilation unit finished
+;   Undefined variable:
+;     J
+;   caught 1 ERROR condition
+;   caught 1 WARNING condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN SPLIT
+;     (- (LENGTH INLIST) J)
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::J
+; 
+; compilation unit finished
+;   Undefined variable:
+;     J
+;   caught 1 WARNING condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+NIL
+
+CL-USER> i
+i
+55
+
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+NIL
+
+CL-USER> i
+i
+55
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN SPLIT
+;     (- (LENGTH INLIST) J)
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::J
+; 
+; compilation unit finished
+;   Undefined variable:
+;     J
+;   caught 1 WARNING condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+NIL
+
+CL-USER> i
+i
+55
+
+CL-USER> (setq i 0)
+(setq i 0)
+0
+
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+NIL
+
+CL-USER> i
+i
+55
+
+CL-USER> brackets
+brackets
+0
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN SPLIT
+;     (- (LENGTH INLIST) J)
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::J
+; 
+; compilation unit finished
+;   Undefined variable:
+;     J
+;   caught 1 WARNING condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+NIL
+
+CL-USER> brackets
+brackets
+0
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+NIL
+
+CL-USER> brackets
+brackets
+0
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+NIL
+
+CL-USER> brackets
+brackets
+0
+
+CL-USER> i
+i
+55
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN SPLIT
+;     (DEFUN SPLIT (SUBSTRING INLIST RETLIST)
+;       (DEFVAR I)
+;       (SETQ I 0)
+;       (DEFVAR BRACKETS)
+;       (SETQ BRACKETS 0)
+;       (SETQ RETLIST 'NIL)
+;       (LOOP FOR LINE IN INLIST
+;             DO (IF (FIND-SUBSTRINGS SUBSTRING LINE)
+;                    (AND (AND # #) (SETQ #))
+;                    (SETQ I #)))
+;       COUNT
+;       I)
+; 
+; caught STYLE-WARNING:
+;   The variable RETLIST is assigned but never read.
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN SPLIT
+;     (DEFUN SPLIT (SUBSTRING INLIST RETLIST)
+;       (DEFVAR I)
+;       (SETQ I 0)
+;       (DEFVAR BRACKETS)
+;       (SETQ BRACKETS 0)
+;       (SETQ RETLIST 'NIL)
+;       (LOOP FOR LINE IN INLIST
+;             DO (IF (FIND-SUBSTRINGS SUBSTRING LINE)
+;                    (AND (AND # #) (SETQ #))
+;                    (SETQ I #)))
+;       COUNT
+;       I)
+; ==>
+;   (BLOCK SPLIT
+;     (DEFVAR I)
+;     (SETQ I 0)
+;     (DEFVAR BRACKETS)
+;     (SETQ BRACKETS 0)
+;     (SETQ RETLIST 'NIL)
+;     (LOOP FOR LINE IN INLIST
+;           DO (IF (FIND-SUBSTRINGS SUBSTRING LINE)
+;                  (AND (AND # #) (SETQ #))
+;                  (SETQ I #)))
+;     COUNT
+;     I)
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP:COUNT
+; 
+; compilation unit finished
+;   Undefined variable:
+;     COUNT
+;   caught 1 WARNING condition
+;   caught 1 STYLE-WARNING condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+NIL
+
+CL-USER> brackets
+brackets
+0
+
+CL-USER> i
+i
+55
+
+CL-USER> j
+j
+CL-USER> (length problem)
+(length problem)
+55
+
+CL-USER> problem
+problem
+("(define (domain tea)" "(:requirements :negative-preconditions :typing)"
+ "(:types cup location kettle water teabag - object)" "(:predicates"
+ "(hot ?w - water)" "(is-in ?o1 - object ?o2 - object)"
+ "(at-location ?lk - location)" "(in-hand ?o - object))"
+ "(:task brew-tea :parameters (?lk - location ?c - cup ?k - kettle ?w - water ?t - teabag))"
+ "(:task boil-water :parameters (?k - kettle ?w - water ?lk - location))"
+ "(:method m-brew-tea" ":parameters (" "?lk - location" "?c - cup"
+ "?k - kettle " "?w - water" "?t - teabag)" ":task (brew-tea ?lk ?c ?k ?w ?t)"
+ ":subtasks (and" " (get-to ?lk)" " (boil-water ?k ?w ?lk)" " (pick-up ?t ?lk)"
+ " (put-in ?t ?c)" " (pour-water ?w ?c ?k))" ")" "(:method m-boil-water"
+ ":parameters (?k - kettle ?w - water ?lk - location)"
+ ":task (boil-water ?k ?w ?lk)" ":subtasks (and" "(pick-up ?w ?lk)"
+ "(put-in ?w ?k)" "(turn-on ?k)" "(pick-up ?k ?lk)" "))" "(:action get-to "
+ ":parameters (?lk - location)" ":precondition (not (at-location ?lk))"
+ ":effect (at-location ?lk))" "(:action pick-up"
+ ":parameters (?o - object ?lk - location)"
+ ":precondition (and(not (in-hand ?o)) (at-location ?lk))"
+ ":effect (in-hand ?o))" "(:action turn-on"
+ ":parameters (?k - kettle ?w - water)" ":precondition (is-in ?w ?k)"
+ ":effect (hot ?w)" ")" "(:action put-in" ":parameters (?o1 ?o2 - object)"
+ ":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))"
+ ":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))" "(:action pour-water"
+ ":parameters (?w - water ?c - cup ?k - kettle)"
+ ":precondition (and (hot ?w) (in-hand ?k))" ":effect (is-in ?w ?c)))")
+
+CL-USER> (htn2strips "git/input/domain.hddl" "git/input/problem.hddl")
+(htn2strips "git/input/domain.hddl" "git/input/problem.hddl")
+CL-USER> 
+(htn2strips "input/domain.hddl" "input/problem.hddl")
+(htn2strips "input/domain.hddl" "input/problem.hddl")
+NIL
+
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+2 
+3 
+4 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+"(:init" 
+"(:init" 
+"(:init" 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+NIL
+
+CL-USER> i
+i
+9
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+NIL
+
+CL-USER> brackets
+brackets
+1
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+NIL
+
+CL-USER> j
+j
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN SPLIT
+;     (SETQ J 0)
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::J
+; 
+; compilation unit finished
+;   Undefined variable:
+;     J
+;   caught 1 WARNING condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+j
+j
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+NIL
+
+CL-USER> j
+j
+0
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+"(:init" 
+"(:init" 
+"(:init" 
+NIL
+
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+"(:init" 
+"(:init" 
+"(:init" 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+7 
+7 
+7 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+7 
+7 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN SPLIT
+;     (I)
+; 
+; caught STYLE-WARNING:
+;   undefined function: COMMON-LISP-USER::I
+; 
+; compilation unit finished
+;   Undefined function:
+;     I
+;   caught 1 STYLE-WARNING condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+7 
+7 
+7 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+7 
+7 
+7 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+7 
+7 
+7 
+NIL
+
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+7 
+7 
+7 
+NIL
+
+CL-USER> j
+j
+0
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+0 
+1 
+2 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN SPLIT
+;     (SETQ START 0)
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::START
+; 
+; compilation unit finished
+;   Undefined variable:
+;     START
+;   caught 1 WARNING condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+1 
+2 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+"(:init" 
+"(:init" 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+"(:init" 
+NIL 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+7 
+14 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+1 
+3 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+"(:domain tea)" 
+"(:htn" 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN SPLIT
+;     (IF (FIND-SUBSTRINGS SUBSTRING LINE)
+;         (SETQ START I)
+;         (AND
+;          (AND (SETQ BRACKETS #)
+;               (LOOP FOR J FROM 1 TO (- # I)
+;                     WHILE (> BRACKETS 0)
+;                     DO (SETQ #) (SETQ #) ...))
+;          (SETQ I (+ I 1)))
+;         (SETQ I (+ I 1)))
+; 
+; caught ERROR:
+;   Error while parsing arguments to special operator IF:
+;     too many elements in
+;       ((FIND-SUBSTRINGS SUBSTRING LINE) (SETQ START I)
+;        (AND
+;         (AND
+;          (SETQ BRACKETS
+;                  (- (COUNT-SUBSTRINGS "(" LINE) (COUNT-SUBSTRINGS ")" LINE)))
+;          (LOOP FOR J FROM 1 TO (- (LENGTH INLIST) I)
+;                WHILE (> BRACKETS 0)
+;                DO (SETQ BRACKETS
+;                           (+ BRACKETS
+;                              (- (COUNT-SUBSTRINGS "(" LINE)
+;                                 (COUNT-SUBSTRINGS ")" LINE)))) (SETQ START
+;                                                                        (+ START
+;                                                                           J)) (PRINT
+;                                                                                (NTH
+;                                                                                 START
+;                                                                                 INLIST))
+;                COUNT J))
+;         (SETQ I (+ I 1)))
+;        (SETQ I (+ I 1)))
+;     to satisfy lambda list
+;       (TEST THEN &OPTIONAL ELSE):
+;     between 2 and 3 expected, but got 4
+
+;     (DEFUN SPLIT (SUBSTRING INLIST RETLIST)
+;       (DEFVAR I)
+;       (SETQ I 0)
+;       (DEFVAR START)
+;       (SETQ START 0)
+;       (DEFVAR BRACKETS)
+;       (SETQ BRACKETS 0)
+;       (SETQ RETLIST 'NIL)
+;       (LOOP FOR LINE IN INLIST
+;             DO (IF (FIND-SUBSTRINGS SUBSTRING LINE)
+;                    (SETQ START I)
+;                    (AND (AND # #) (SETQ #))
+;                    (SETQ I #))
+;             COUNT I)
+;       RETLIST)
+; 
+; caught STYLE-WARNING:
+;   The variable SUBSTRING is defined but never used.
+; 
+; compilation unit finished
+;   caught 1 ERROR condition
+;   caught 1 STYLE-WARNING condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+"(at-location lh)))" 
+NIL 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+8 
+10 
+NIL
+
+CL-USER> 
+(split "(:domain" problem '())
+(split "(:domain" problem '())
+NIL
+
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+4 
+6 
+9 
+13 
+18 
+24 
+NIL
+
+CL-USER> problem
+problem
+("(define (problem p)" "(:domain tea)"
+ "(:objects c - cup lk lh - location k - kettle w - water t - teabag)" "(:htn"
+ ":tasks (brew-tea lk c k w t)" ":ordering ()" ":constraints ())" "(:init"
+ "(at-location lh)))")
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+problem
+problem
+("(define (problem p)" "(:domain tea)"
+ "(:objects c - cup lk lh - location k - kettle w - water t - teabag)" "(:htn"
+ ":tasks (brew-tea lk c k w t)" ":ordering ()" ":constraints ())" "(:init"
+ "(at-location lh)))")
+
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+2 
+3 
+4 
+5 
+6 
+7 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+4 
+6 
+9 
+13 
+18 
+24 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+2 
+2 
+1 
+1 
+1 
+1 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+2 
+3 
+3 
+2 
+2 
+2 
+2 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+2 
+3 
+3 
+2 
+2 
+2 
+2 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+2 
+2 
+1 
+1 
+1 
+1 
+1 
+NIL
+
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+2 
+2 
+1 
+1 
+1 
+1 
+1 
+NIL
+
+CL-USER> (nth 7 problem)
+(nth 7 problem)
+"(:init"
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(nth 7 problem)
+(nth 7 problem)
+"(:init"
+
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+1 
+1 
+1 
+2 
+2 
+2 
+2 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+1 
+1 
+2 
+2 
+2 
+2 
+NIL
+
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+1 
+1 
+2 
+2 
+2 
+2 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+5 
+7 
+10 
+14 
+19 
+25 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+5 
+7 
+10 
+14 
+19 
+25 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+1 
+2 
+3 
+4 
+5 
+6 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN SPLIT
+;     (PRINT)
+; 
+; caught WARNING:
+;   The function PRINT is called with zero arguments, but wants at least one.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+4 
+4 
+4 
+4 
+4 
+4 
+NIL
+
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+5 
+7 
+10 
+14 
+19 
+25 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+5 
+6 
+7 
+8 
+9 
+10 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+5 
+6 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+1 
+0 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN SPLIT
+;     (NTH (+ START J))
+; 
+; caught WARNING:
+;   The function NTH is called with one argument, but wants exactly two.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+CL-USER> 
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+":ordering ()" 
+":constraints ())" 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+":tasks (brew-tea lk c k w t)" 
+":ordering ()" 
+":constraints ())" 
+NIL
+
+CL-USER> 
+(split "(:action" domain '())
+(split "(:action" domain '())
+
+":parameters (?lk - location)" 
+":precondition (not (at-location ?lk))" 
+":effect (at-location ?lk))" 
+"(:action pick-up" 
+":parameters (?o - object ?lk - location)" 
+":precondition (and(not (in-hand ?o)) (at-location ?lk))" 
+":effect (in-hand ?o))" 
+"(:action turn-on" 
+":parameters (?k - kettle ?w - water)" 
+":precondition (is-in ?w ?k)" 
+":effect (hot ?w)" 
+")" 
+"(:action put-in" 
+":parameters (?o1 ?o2 - object)" 
+":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))" 
+":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))" 
+"(:action pour-water" 
+":parameters (?w - water ?c - cup ?k - kettle)" 
+":precondition (and (hot ?w) (in-hand ?k))" 
+":effect (is-in ?w ?c)))" 
+":effect (in-hand ?o))" 
+":effect (hot ?w)" 
+")" 
+":parameters (?o1 ?o2 - object)" 
+":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))" 
+":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))" 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+"(:htn" 
+":tasks (brew-tea lk c k w t)" 
+":ordering ()" 
+":constraints ())" 
+"(:init" 
+"(at-location lh)))" 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+":ordering ()" 
+":constraints ())" 
+NIL
+
+CL-USER> 
+(split "(:action" domain '())
+(split "(:action" domain '())
+
+":precondition (not (at-location ?lk))" 
+":effect (at-location ?lk))" 
+":parameters (?o - object ?lk - location)" 
+":precondition (and(not (in-hand ?o)) (at-location ?lk))" 
+":effect (in-hand ?o))" 
+"(:action turn-on" 
+":parameters (?k - kettle ?w - water)" 
+":precondition (is-in ?w ?k)" 
+":effect (hot ?w)" 
+")" 
+"(:action put-in" 
+":parameters (?o1 ?o2 - object)" 
+":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))" 
+":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))" 
+"(:action pour-water" 
+":parameters (?w - water ?c - cup ?k - kettle)" 
+":precondition (and (hot ?w) (in-hand ?k))" 
+":effect (is-in ?w ?c)))" 
+")" 
+":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))" 
+":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))" 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+":ordering ()" 
+":constraints ())" 
+NIL
+
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+":ordering ()" 
+":constraints ())" 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+":tasks (brew-tea lk c k w t)" 
+":ordering ()" 
+":constraints ())" 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+"(:htn" 
+":tasks (brew-tea lk c k w t)" 
+":ordering ()" 
+":constraints ())" 
+"(:init" 
+"(at-location lh)))" 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+":tasks (brew-tea lk c k w t)" 
+":ordering ()" 
+":constraints ())" 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:htn" problem '())
+(split "(:htn" problem '())
+
+":tasks (brew-tea lk c k w t)" 
+":ordering ()" 
+":constraints ())" 
+NIL
+
+CL-USER> 
+(split "(:action" domain '())
+(split "(:action" domain '())
+
+":parameters (?lk - location)" 
+":precondition (not (at-location ?lk))" 
+":effect (at-location ?lk))" 
+"(:action pick-up" 
+":parameters (?o - object ?lk - location)" 
+":precondition (and(not (in-hand ?o)) (at-location ?lk))" 
+":effect (in-hand ?o))" 
+"(:action turn-on" 
+":parameters (?k - kettle ?w - water)" 
+":precondition (is-in ?w ?k)" 
+":effect (hot ?w)" 
+")" 
+"(:action put-in" 
+":parameters (?o1 ?o2 - object)" 
+":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))" 
+":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))" 
+"(:action pour-water" 
+":parameters (?w - water ?c - cup ?k - kettle)" 
+":precondition (and (hot ?w) (in-hand ?k))" 
+":effect (is-in ?w ?c)))" 
+":effect (in-hand ?o))" 
+":effect (hot ?w)" 
+")" 
+":parameters (?o1 ?o2 - object)" 
+":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))" 
+":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))" 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:action" domain '())
+(split "(:action" domain '())
+
+":parameters (?lk - location)" 
+":precondition (not (at-location ?lk))" 
+":effect (at-location ?lk))" 
+"(:action pick-up" 
+":parameters (?o - object ?lk - location)" 
+":precondition (and(not (in-hand ?o)) (at-location ?lk))" 
+":effect (in-hand ?o))" 
+"(:action turn-on" 
+":parameters (?k - kettle ?w - water)" 
+":precondition (is-in ?w ?k)" 
+":effect (hot ?w)" 
+")" 
+"(:action put-in" 
+":parameters (?o1 ?o2 - object)" 
+":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))" 
+":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))" 
+"(:action pour-water" 
+":parameters (?w - water ?c - cup ?k - kettle)" 
+":precondition (and (hot ?w) (in-hand ?k))" 
+":effect (is-in ?w ?c)))" 
+":effect (in-hand ?o))" 
+":effect (hot ?w)" 
+")" 
+":parameters (?o1 ?o2 - object)" 
+":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))" 
+":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))" 
+NIL
+
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:action" domain '())
+(split "(:action" domain '())
+
+":parameters (?lk - location)" 
+"-----------" 
+":precondition (not (at-location ?lk))" 
+"-----------" 
+":effect (at-location ?lk))" 
+"-----------" 
+"(:action pick-up" 
+"-----------" 
+":parameters (?o - object ?lk - location)" 
+"-----------" 
+":precondition (and(not (in-hand ?o)) (at-location ?lk))" 
+"-----------" 
+":effect (in-hand ?o))" 
+"-----------" 
+"(:action turn-on" 
+"-----------" 
+":parameters (?k - kettle ?w - water)" 
+"-----------" 
+":precondition (is-in ?w ?k)" 
+"-----------" 
+":effect (hot ?w)" 
+"-----------" 
+")" 
+"-----------" 
+"(:action put-in" 
+"-----------" 
+":parameters (?o1 ?o2 - object)" 
+"-----------" 
+":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))" 
+"-----------" 
+":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))" 
+"-----------" 
+"(:action pour-water" 
+"-----------" 
+":parameters (?w - water ?c - cup ?k - kettle)" 
+"-----------" 
+":precondition (and (hot ?w) (in-hand ?k))" 
+"-----------" 
+":effect (is-in ?w ?c)))" 
+"-----------" 
+":effect (in-hand ?o))" 
+"-----------" 
+":effect (hot ?w)" 
+"-----------" 
+")" 
+"-----------" 
+":parameters (?o1 ?o2 - object)" 
+"-----------" 
+":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))" 
+"-----------" 
+":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))" 
+"-----------" 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:action" domain '())
+(split "(:action" domain '())
+
+":parameters (?lk - location)" 
+":precondition (not (at-location ?lk))" 
+":effect (at-location ?lk))" 
+"(:action pick-up" 
+":parameters (?o - object ?lk - location)" 
+":precondition (and(not (in-hand ?o)) (at-location ?lk))" 
+":effect (in-hand ?o))" 
+"(:action turn-on" 
+":parameters (?k - kettle ?w - water)" 
+":precondition (is-in ?w ?k)" 
+":effect (hot ?w)" 
+")" 
+"(:action put-in" 
+":parameters (?o1 ?o2 - object)" 
+":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))" 
+":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))" 
+"(:action pour-water" 
+":parameters (?w - water ?c - cup ?k - kettle)" 
+":precondition (and (hot ?w) (in-hand ?k))" 
+":effect (is-in ?w ?c)))" 
+":effect (in-hand ?o))" 
+":effect (hot ?w)" 
+")" 
+":parameters (?o1 ?o2 - object)" 
+":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))" 
+":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))" 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:action" domain '())
+(split "(:action" domain '())
+
+":parameters (?lk - location)" 
+":precondition (not (at-location ?lk))" 
+":effect (at-location ?lk))" 
+"(:action pick-up" 
+":parameters (?o - object ?lk - location)" 
+":precondition (and(not (in-hand ?o)) (at-location ?lk))" 
+":effect (in-hand ?o))" 
+"(:action turn-on" 
+":parameters (?k - kettle ?w - water)" 
+":precondition (is-in ?w ?k)" 
+":effect (hot ?w)" 
+")" 
+"(:action put-in" 
+":parameters (?o1 ?o2 - object)" 
+":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))" 
+":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))" 
+"(:action pour-water" 
+":parameters (?w - water ?c - cup ?k - kettle)" 
+":precondition (and (hot ?w) (in-hand ?k))" 
+":effect (is-in ?w ?c)))" 
+":effect (in-hand ?o))" 
+":effect (hot ?w)" 
+")" 
+":parameters (?o1 ?o2 - object)" 
+":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))" 
+":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))" 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:action" domain '())
+(split "(:action" domain '())
+
+1 
+1 
+0 
+2 
+2 
+2 
+1 
+2 
+2 
+2 
+2 
+1 
+2 
+2 
+2 
+1 
+2 
+2 
+2 
+0 
+0 
+1 
+0 
+1 
+1 
+0 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:action" domain '())
+(split "(:action" domain '())
+
+34 
+34 
+34 
+37 
+37 
+37 
+37 
+37 
+37 
+37 
+37 
+37 
+37 
+37 
+37 
+37 
+37 
+37 
+37 
+37 
+40 
+44 
+44 
+47 
+47 
+47 
+NIL
+
+CL-USER> (nth 34 domain)
+(nth 34 domain)
+"(:action get-to "
+
+CL-USER> 
+(nth 37 domain)
+(nth 37 domain)
+":effect (at-location ?lk))"
+
+CL-USER> (find-substrings "(:action" (nth 37 domain))
+(find-substrings "(:action" (nth 37 domain))
+NIL
+
+CL-USER> 
+(nth 47 domain)
+(nth 47 domain)
+"(:action put-in"
+
+CL-USER> 
+(nth 40 domain)
+(nth 40 domain)
+":precondition (and(not (in-hand ?o)) (at-location ?lk))"
+
+CL-USER> 
+(nth 44 domain)
+(nth 44 domain)
+":precondition (is-in ?w ?k)"
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(find-substrings "(:action" (nth 37 domain))
+(find-substrings "(:action" (nth 37 domain))
+NIL
+
+CL-USER> 
+(split "(:action" domain '())
+(split "(:action" domain '())
+
+35 
+36 
+37 
+38 
+39 
+40 
+41 
+42 
+43 
+44 
+45 
+46 
+47 
+48 
+49 
+50 
+51 
+52 
+53 
+54 
+41 
+45 
+46 
+48 
+49 
+50 
+NIL
+
+CL-USER> 
+(nth 34 domain)
+(nth 34 domain)
+"(:action get-to "
+
+CL-USER> 
+(nth 38 domain)
+(nth 38 domain)
+"(:action pick-up"
+
+CL-USER> 
+(nth 45 domain)
+(nth 45 domain)
+":effect (hot ?w)"
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN SPLIT
+;     (I)
+; 
+; caught STYLE-WARNING:
+;   undefined function: COMMON-LISP-USER::I
+; 
+; compilation unit finished
+;   Undefined function:
+;     I
+;   caught 1 STYLE-WARNING condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:action" domain '())
+(split "(:action" domain '())
+
+34 
+34 
+34 
+37 
+37 
+37 
+37 
+37 
+37 
+37 
+37 
+37 
+37 
+37 
+37 
+37 
+37 
+37 
+37 
+37 
+40 
+44 
+44 
+47 
+47 
+47 
+NIL
+
+CL-USER> 
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN SPLIT
+;     (SETQ BRACKETS 0)
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::BRACKETS
+
+;     (SETQ I 0)
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::I
+
+;     (SETQ START 0)
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::START
+; 
+; compilation unit finished
+;   Undefined variables:
+;     BRACKETS I START
+;   caught 3 WARNING conditions
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> (htn2strips "git/input/domain.hddl" "git/input/problem.hddl")
+(htn2strips "git/input/domain.hddl" "git/input/problem.hddl")
+CL-USER> (htn2strips "input/domain.hddl" "input/problem.hddl")
+(htn2strips "input/domain.hddl" "input/problem.hddl")
+NIL
+
+CL-USER> (split "(:init" problem '())
+(split "(:init" problem '())
+
+7 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN SPLIT
+;     (APPEND TEMPLIST (LIST LINE))
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::TEMPLIST
+; 
+; compilation unit finished
+;   Undefined variable:
+;     TEMPLIST
+;   caught 1 WARNING condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+7 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+7 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+7 
+("(:init")
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+7 
+("(:init" "(at-location lh)))")
+
+CL-USER> 
+(split "(:task" domain '())
+(split "(:task" domain '())
+("(:task brew-tea :parameters (?lk - location ?c - cup ?k - kettle ?w - water ?t - teabag))"
+ "(:task boil-water :parameters (?k - kettle ?w - water ?lk - location))")
+
+CL-USER> 
+(split "(:method" domain '())
+(split "(:method" domain '())
+
+10 
+10 
+10 
+10 
+10 
+10 
+10 
+10 
+10 
+10 
+10 
+10 
+10 
+10 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+("(:method m-brew-tea" ":parameters (" "?lk - location" "?c - cup"
+ "?k - kettle " "?w - water" "?t - teabag)" ":task (brew-tea ?lk ?c ?k ?w ?t)"
+ ":subtasks (and" " (get-to ?lk)" " (boil-water ?k ?w ?lk)" " (pick-up ?t ?lk)"
+ " (put-in ?t ?c)" " (pour-water ?w ?c ?k))" ")" "(:method m-boil-water"
+ "(:method m-boil-water" ":parameters (?k - kettle ?w - water ?lk - location)"
+ ":task (boil-water ?k ?w ?lk)" ":subtasks (and" "(pick-up ?w ?lk)"
+ "(put-in ?w ?k)" "(turn-on ?k)" "(pick-up ?k ?lk)" "))" "(:action get-to "
+ ":parameters (?lk - location)" ":precondition (not (at-location ?lk))"
+ ":effect (at-location ?lk))" "(:action pick-up"
+ ":parameters (?o - object ?lk - location)"
+ ":precondition (and(not (in-hand ?o)) (at-location ?lk))"
+ ":effect (in-hand ?o))" "(:action turn-on"
+ ":parameters (?k - kettle ?w - water)" ":precondition (is-in ?w ?k)"
+ ":effect (hot ?w)" ")" "(:action put-in" ":parameters (?o1 ?o2 - object)"
+ ":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))"
+ ":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))" "(:action pour-water"
+ ":parameters (?w - water ?c - cup ?k - kettle)"
+ ":precondition (and (hot ?w) (in-hand ?k))" ":effect (is-in ?w ?c)))")
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:method" domain '())
+(split "(:method" domain '())
+
+10 
+10 
+10 
+10 
+10 
+10 
+10 
+10 
+10 
+10 
+10 
+10 
+10 
+10 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+24 
+(NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL
+ ("(:method m-brew-tea" ":parameters (" "?lk - location" "?c - cup"
+  "?k - kettle " "?w - water" "?t - teabag)" ":task (brew-tea ?lk ?c ?k ?w ?t)"
+  ":subtasks (and" " (get-to ?lk)" " (boil-water ?k ?w ?lk)"
+  " (pick-up ?t ?lk)" " (put-in ?t ?c)" " (pour-water ?w ?c ?k))" ")")
+ NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL
+ ("(:method m-boil-water" "(:method m-boil-water"
+  ":parameters (?k - kettle ?w - water ?lk - location)"
+  ":task (boil-water ?k ?w ?lk)" ":subtasks (and" "(pick-up ?w ?lk)"
+  "(put-in ?w ?k)" "(turn-on ?k)" "(pick-up ?k ?lk)" "))" "(:action get-to "
+  ":parameters (?lk - location)" ":precondition (not (at-location ?lk))"
+  ":effect (at-location ?lk))" "(:action pick-up"
+  ":parameters (?o - object ?lk - location)"
+  ":precondition (and(not (in-hand ?o)) (at-location ?lk))"
+  ":effect (in-hand ?o))" "(:action turn-on"
+  ":parameters (?k - kettle ?w - water)" ":precondition (is-in ?w ?k)"
+  ":effect (hot ?w)" ")" "(:action put-in" ":parameters (?o1 ?o2 - object)"
+  ":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))"
+  ":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))" "(:action pour-water"
+  ":parameters (?w - water ?c - cup ?k - kettle)"
+  ":precondition (and (hot ?w) (in-hand ?k))" ":effect (is-in ?w ?c)))")
+ NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL
+ NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL)
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:method" domain '())
+(split "(:method" domain '())
+
+2 
+2 
+2 
+2 
+2 
+1 
+1 
+2 
+2 
+2 
+2 
+2 
+1 
+0 
+2 
+2 
+2 
+3 
+3 
+3 
+3 
+3 
+1 
+2 
+2 
+2 
+1 
+2 
+2 
+2 
+1 
+2 
+2 
+2 
+2 
+1 
+2 
+2 
+2 
+1 
+2 
+2 
+2 
+0 
+(NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL
+ ("(:method m-brew-tea" ":parameters (" "?lk - location" "?c - cup"
+  "?k - kettle " "?w - water" "?t - teabag)" ":task (brew-tea ?lk ?c ?k ?w ?t)"
+  ":subtasks (and" " (get-to ?lk)" " (boil-water ?k ?w ?lk)"
+  " (pick-up ?t ?lk)" " (put-in ?t ?c)" " (pour-water ?w ?c ?k))" ")")
+ NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL
+ ("(:method m-boil-water" "(:method m-boil-water"
+  ":parameters (?k - kettle ?w - water ?lk - location)"
+  ":task (boil-water ?k ?w ?lk)" ":subtasks (and" "(pick-up ?w ?lk)"
+  "(put-in ?w ?k)" "(turn-on ?k)" "(pick-up ?k ?lk)" "))" "(:action get-to "
+  ":parameters (?lk - location)" ":precondition (not (at-location ?lk))"
+  ":effect (at-location ?lk))" "(:action pick-up"
+  ":parameters (?o - object ?lk - location)"
+  ":precondition (and(not (in-hand ?o)) (at-location ?lk))"
+  ":effect (in-hand ?o))" "(:action turn-on"
+  ":parameters (?k - kettle ?w - water)" ":precondition (is-in ?w ?k)"
+  ":effect (hot ?w)" ")" "(:action put-in" ":parameters (?o1 ?o2 - object)"
+  ":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))"
+  ":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))" "(:action pour-water"
+  ":parameters (?w - water ?c - cup ?k - kettle)"
+  ":precondition (and (hot ?w) (in-hand ?k))" ":effect (is-in ?w ?c)))")
+ NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL
+ NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL)
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:method" domain '())
+(split "(:method" domain '())
+
+1 
+1 
+2 
+2 
+2 
+2 
+1 
+1 
+1 
+2 
+3 
+3 
+3 
+3 
+3 
+2 
+2 
+3 
+3 
+3 
+3 
+3 
+2 
+1 
+2 
+2 
+2 
+3 
+3 
+3 
+3 
+3 
+1 
+2 
+2 
+2 
+1 
+2 
+2 
+2 
+1 
+2 
+2 
+2 
+2 
+1 
+2 
+2 
+2 
+1 
+2 
+2 
+2 
+0 
+1 
+1 
+2 
+2 
+2 
+2 
+1 
+1 
+1 
+2 
+3 
+3 
+3 
+3 
+3 
+2 
+2 
+3 
+3 
+3 
+3 
+3 
+2 
+1 
+2 
+2 
+2 
+3 
+3 
+3 
+3 
+3 
+1 
+2 
+2 
+2 
+1 
+2 
+2 
+2 
+1 
+2 
+2 
+2 
+2 
+1 
+2 
+2 
+2 
+1 
+2 
+2 
+2 
+0 
+(NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL
+ ("(:method m-brew-tea" "(:requirements :negative-preconditions :typing)"
+  "(:types cup location kettle water teabag - object)" "(:predicates"
+  "(hot ?w - water)" "(is-in ?o1 - object ?o2 - object)"
+  "(at-location ?lk - location)" "(in-hand ?o - object))"
+  "(:task brew-tea :parameters (?lk - location ?c - cup ?k - kettle ?w - water ?t - teabag))"
+  "(:task boil-water :parameters (?k - kettle ?w - water ?lk - location))"
+  "(:method m-brew-tea" ":parameters (" "?lk - location" "?c - cup"
+  "?k - kettle " "?w - water" "?t - teabag)" ":task (brew-tea ?lk ?c ?k ?w ?t)"
+  ":subtasks (and" " (get-to ?lk)" " (boil-water ?k ?w ?lk)"
+  " (pick-up ?t ?lk)" " (put-in ?t ?c)" " (pour-water ?w ?c ?k))" ")"
+  "(:method m-boil-water" ":parameters (?k - kettle ?w - water ?lk - location)"
+  ":task (boil-water ?k ?w ?lk)" ":subtasks (and" "(pick-up ?w ?lk)"
+  "(put-in ?w ?k)" "(turn-on ?k)" "(pick-up ?k ?lk)" "))" "(:action get-to "
+  ":parameters (?lk - location)" ":precondition (not (at-location ?lk))"
+  ":effect (at-location ?lk))" "(:action pick-up"
+  ":parameters (?o - object ?lk - location)"
+  ":precondition (and(not (in-hand ?o)) (at-location ?lk))"
+  ":effect (in-hand ?o))" "(:action turn-on"
+  ":parameters (?k - kettle ?w - water)" ":precondition (is-in ?w ?k)"
+  ":effect (hot ?w)" ")" "(:action put-in" ":parameters (?o1 ?o2 - object)"
+  ":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))"
+  ":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))" "(:action pour-water"
+  ":parameters (?w - water ?c - cup ?k - kettle)"
+  ":precondition (and (hot ?w) (in-hand ?k))" ":effect (is-in ?w ?c)))")
+ NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL
+ ("(:method m-boil-water" "(:requirements :negative-preconditions :typing)"
+  "(:types cup location kettle water teabag - object)" "(:predicates"
+  "(hot ?w - water)" "(is-in ?o1 - object ?o2 - object)"
+  "(at-location ?lk - location)" "(in-hand ?o - object))"
+  "(:task brew-tea :parameters (?lk - location ?c - cup ?k - kettle ?w - water ?t - teabag))"
+  "(:task boil-water :parameters (?k - kettle ?w - water ?lk - location))"
+  "(:method m-brew-tea" ":parameters (" "?lk - location" "?c - cup"
+  "?k - kettle " "?w - water" "?t - teabag)" ":task (brew-tea ?lk ?c ?k ?w ?t)"
+  ":subtasks (and" " (get-to ?lk)" " (boil-water ?k ?w ?lk)"
+  " (pick-up ?t ?lk)" " (put-in ?t ?c)" " (pour-water ?w ?c ?k))" ")"
+  "(:method m-boil-water" ":parameters (?k - kettle ?w - water ?lk - location)"
+  ":task (boil-water ?k ?w ?lk)" ":subtasks (and" "(pick-up ?w ?lk)"
+  "(put-in ?w ?k)" "(turn-on ?k)" "(pick-up ?k ?lk)" "))" "(:action get-to "
+  ":parameters (?lk - location)" ":precondition (not (at-location ?lk))"
+  ":effect (at-location ?lk))" "(:action pick-up"
+  ":parameters (?o - object ?lk - location)"
+  ":precondition (and(not (in-hand ?o)) (at-location ?lk))"
+  ":effect (in-hand ?o))" "(:action turn-on"
+  ":parameters (?k - kettle ?w - water)" ":precondition (is-in ?w ?k)"
+  ":effect (hot ?w)" ")" "(:action put-in" ":parameters (?o1 ?o2 - object)"
+  ":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))"
+  ":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))" "(:action pour-water"
+  ":parameters (?w - water ?c - cup ?k - kettle)"
+  ":precondition (and (hot ?w) (in-hand ?k))" ":effect (is-in ?w ?c)))")
+ NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL
+ NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL)
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:method" domain '())
+(split "(:method" domain '())
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+(NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL
+ ("(:method m-brew-tea" "(:requirements :negative-preconditions :typing)"
+  "(:types cup location kettle water teabag - object)" "(:predicates"
+  "(hot ?w - water)" "(is-in ?o1 - object ?o2 - object)"
+  "(at-location ?lk - location)" "(in-hand ?o - object))"
+  "(:task brew-tea :parameters (?lk - location ?c - cup ?k - kettle ?w - water ?t - teabag))"
+  "(:task boil-water :parameters (?k - kettle ?w - water ?lk - location))"
+  "(:method m-brew-tea" ":parameters (" "?lk - location" "?c - cup"
+  "?k - kettle " "?w - water" "?t - teabag)" ":task (brew-tea ?lk ?c ?k ?w ?t)"
+  ":subtasks (and" " (get-to ?lk)" " (boil-water ?k ?w ?lk)"
+  " (pick-up ?t ?lk)" " (put-in ?t ?c)" " (pour-water ?w ?c ?k))" ")"
+  "(:method m-boil-water" ":parameters (?k - kettle ?w - water ?lk - location)"
+  ":task (boil-water ?k ?w ?lk)" ":subtasks (and" "(pick-up ?w ?lk)"
+  "(put-in ?w ?k)" "(turn-on ?k)" "(pick-up ?k ?lk)" "))" "(:action get-to "
+  ":parameters (?lk - location)" ":precondition (not (at-location ?lk))"
+  ":effect (at-location ?lk))" "(:action pick-up"
+  ":parameters (?o - object ?lk - location)"
+  ":precondition (and(not (in-hand ?o)) (at-location ?lk))"
+  ":effect (in-hand ?o))" "(:action turn-on"
+  ":parameters (?k - kettle ?w - water)" ":precondition (is-in ?w ?k)"
+  ":effect (hot ?w)" ")" "(:action put-in" ":parameters (?o1 ?o2 - object)"
+  ":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))"
+  ":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))" "(:action pour-water"
+  ":parameters (?w - water ?c - cup ?k - kettle)"
+  ":precondition (and (hot ?w) (in-hand ?k))" ":effect (is-in ?w ?c)))")
+ NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL
+ ("(:method m-boil-water" "(:requirements :negative-preconditions :typing)"
+  "(:types cup location kettle water teabag - object)" "(:predicates"
+  "(hot ?w - water)" "(is-in ?o1 - object ?o2 - object)"
+  "(at-location ?lk - location)" "(in-hand ?o - object))"
+  "(:task brew-tea :parameters (?lk - location ?c - cup ?k - kettle ?w - water ?t - teabag))"
+  "(:task boil-water :parameters (?k - kettle ?w - water ?lk - location))"
+  "(:method m-brew-tea" ":parameters (" "?lk - location" "?c - cup"
+  "?k - kettle " "?w - water" "?t - teabag)" ":task (brew-tea ?lk ?c ?k ?w ?t)"
+  ":subtasks (and" " (get-to ?lk)" " (boil-water ?k ?w ?lk)"
+  " (pick-up ?t ?lk)" " (put-in ?t ?c)" " (pour-water ?w ?c ?k))" ")"
+  "(:method m-boil-water" ":parameters (?k - kettle ?w - water ?lk - location)"
+  ":task (boil-water ?k ?w ?lk)" ":subtasks (and" "(pick-up ?w ?lk)"
+  "(put-in ?w ?k)" "(turn-on ?k)" "(pick-up ?k ?lk)" "))" "(:action get-to "
+  ":parameters (?lk - location)" ":precondition (not (at-location ?lk))"
+  ":effect (at-location ?lk))" "(:action pick-up"
+  ":parameters (?o - object ?lk - location)"
+  ":precondition (and(not (in-hand ?o)) (at-location ?lk))"
+  ":effect (in-hand ?o))" "(:action turn-on"
+  ":parameters (?k - kettle ?w - water)" ":precondition (is-in ?w ?k)"
+  ":effect (hot ?w)" ")" "(:action put-in" ":parameters (?o1 ?o2 - object)"
+  ":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))"
+  ":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))" "(:action pour-water"
+  ":parameters (?w - water ?c - cup ?k - kettle)"
+  ":precondition (and (hot ?w) (in-hand ?k))" ":effect (is-in ?w ?c)))")
+ NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL
+ NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL)
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+7 
+(NIL NIL NIL NIL NIL NIL NIL ("(:init" "(at-location lh)))") NIL)
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+NIL
+
+CL-USER> problem
+problem
+("(define (problem p)" "(:domain tea)"
+ "(:objects c - cup lk lh - location k - kettle w - water t - teabag)" "(:htn"
+ ":tasks (brew-tea lk c k w t)" ":ordering ()" ":constraints ())" "(:init"
+ "(at-location lh)))")
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+24 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> i
+i
+25
+
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+33 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+8 
+NIL
+
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+8 
+NIL
+
+CL-USER> (nth 8 problem)
+(nth 8 problem)
+"(at-location lh)))"
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(nth 8 problem)
+(nth 8 problem)
+"(at-location lh)))"
+
+CL-USER> 
+(nth 8 problem)
+(nth 8 problem)
+"(at-location lh)))"
+
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+7 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+7 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+7 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+7 
+7 
+8 
+9 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+7 
+7 
+8 
+9 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+7 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+8 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN SPLIT
+;     (+ I J)
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::J
+; 
+; compilation unit finished
+;   Undefined variable:
+;     J
+;   caught 1 WARNING condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+8 
+8 
+9 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN SPLIT
+;     (+ I J)
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::J
+; 
+; compilation unit finished
+;   Undefined variable:
+;     J
+;   caught 1 WARNING condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+8 
+8 
+9 
+CL-USER> 
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+8 
+8 
+9 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+8 
+8 
+9 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN SPLIT
+;     (SETQ (+ BRACKETS (- (COUNT-SUBSTRINGS "(" #) (COUNT-SUBSTRINGS ")" #))))
+; 
+; caught ERROR:
+;   odd number of args to SETQ: (SETQ (+ BRACKETS
+;                                        (-
+;                                         (COUNT-SUBSTRINGS "("
+;                                                           (NTH (+ I J) INLIST))
+;                                         (COUNT-SUBSTRINGS ")"
+;                                                           (NTH (+ I J) INLIST)))))
+; 
+; compilation unit finished
+;   caught 1 ERROR condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+8 
+8 
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+8 
+8 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+"(:init" 
+8 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+"(:init" 
+"(at-location lh)))" 
+NIL
+
+CL-USER> 
+(split "(:task" domain '())
+(split "(:task" domain '())
+
+"(:task brew-tea :parameters (?lk - location ?c - cup ?k - kettle ?w - water ?t - teabag))" 
+"(:task boil-water :parameters (?k - kettle ?w - water ?lk - location))" 
+NIL
+
+CL-USER> 
+(split "(:method" domain '())
+(split "(:method" domain '())
+
+"(:method m-brew-tea" 
+":parameters (" 
+"?lk - location" 
+"?c - cup" 
+"?k - kettle " 
+"?w - water" 
+"?t - teabag)" 
+":task (brew-tea ?lk ?c ?k ?w ?t)" 
+":subtasks (and" 
+" (get-to ?lk)" 
+" (boil-water ?k ?w ?lk)" 
+" (pick-up ?t ?lk)" 
+" (put-in ?t ?c)" 
+" (pour-water ?w ?c ?k))" 
+")" 
+"(:method m-boil-water" 
+":parameters (?k - kettle ?w - water ?lk - location)" 
+":task (boil-water ?k ?w ?lk)" 
+":subtasks (and" 
+"(pick-up ?w ?lk)" 
+"(put-in ?w ?k)" 
+"(turn-on ?k)" 
+"(pick-up ?k ?lk)" 
+"))" 
+NIL
+
+CL-USER> 
+(split "(:action" domain '())
+(split "(:action" domain '())
+
+"(:action get-to " 
+":parameters (?lk - location)" 
+":precondition (not (at-location ?lk))" 
+":effect (at-location ?lk))" 
+"(:action pick-up" 
+":parameters (?o - object ?lk - location)" 
+":precondition (and(not (in-hand ?o)) (at-location ?lk))" 
+":effect (in-hand ?o))" 
+"(:action turn-on" 
+":parameters (?k - kettle ?w - water)" 
+":precondition (is-in ?w ?k)" 
+":effect (hot ?w)" 
+")" 
+"(:action put-in" 
+":parameters (?o1 ?o2 - object)" 
+":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))" 
+":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))" 
+"(:action pour-water" 
+":parameters (?w - water ?c - cup ?k - kettle)" 
+":precondition (and (hot ?w) (in-hand ?k))" 
+":effect (is-in ?w ?c)))" 
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:action" domain '())
+(split "(:action" domain '())
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:action" domain '())
+(split "(:action" domain '())
+("(:action get-to " ":parameters (?lk - location)"
+ ":precondition (not (at-location ?lk))" ":effect (at-location ?lk))"
+ "(:action pick-up" ":parameters (?o - object ?lk - location)"
+ ":precondition (and(not (in-hand ?o)) (at-location ?lk))"
+ ":effect (in-hand ?o))" "(:action turn-on"
+ ":parameters (?k - kettle ?w - water)" ":precondition (is-in ?w ?k)"
+ ":effect (hot ?w)" ")" "(:action put-in" ":parameters (?o1 ?o2 - object)"
+ ":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))"
+ ":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))" "(:action pour-water"
+ ":parameters (?w - water ?c - cup ?k - kettle)"
+ ":precondition (and (hot ?w) (in-hand ?k))" ":effect (is-in ?w ?c)))")
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:action" domain '())
+(split "(:action" domain '())
+(("(:action get-to " ":parameters (?lk - location)"
+  ":precondition (not (at-location ?lk))" ":effect (at-location ?lk))")
+ ("(:action pick-up" ":parameters (?o - object ?lk - location)"
+  ":precondition (and(not (in-hand ?o)) (at-location ?lk))"
+  ":effect (in-hand ?o))")
+ ("(:action turn-on" ":parameters (?k - kettle ?w - water)"
+  ":precondition (is-in ?w ?k)" ":effect (hot ?w)" ")")
+ ("(:action put-in" ":parameters (?o1 ?o2 - object)"
+  ":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))"
+  ":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))")
+ ("(:action pour-water" ":parameters (?w - water ?c - cup ?k - kettle)"
+  ":precondition (and (hot ?w) (in-hand ?k))" ":effect (is-in ?w ?c)))"))
+
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+(("(:init" "(at-location lh)))"))
+
+CL-USER> 
+(split "(:method" domain '())
+(split "(:method" domain '())
+(("(:method m-brew-tea" ":parameters (" "?lk - location" "?c - cup"
+  "?k - kettle " "?w - water" "?t - teabag)" ":task (brew-tea ?lk ?c ?k ?w ?t)"
+  ":subtasks (and" " (get-to ?lk)" " (boil-water ?k ?w ?lk)"
+  " (pick-up ?t ?lk)" " (put-in ?t ?c)" " (pour-water ?w ?c ?k))" ")")
+ ("(:method m-boil-water" ":parameters (?k - kettle ?w - water ?lk - location)"
+  ":task (boil-water ?k ?w ?lk)" ":subtasks (and" "(pick-up ?w ?lk)"
+  "(put-in ?w ?k)" "(turn-on ?k)" "(pick-up ?k ?lk)" "))"))
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+(split "(:init" problem '())
+CL-USER> 
+CL-USER> 
+(split "(:method" domain '())
+(split "(:method" domain '())
+CL-USER> (rea)
+(rea)
+; in: REA
+;     (REA)
+; 
+; caught STYLE-WARNING:
+;   undefined function: COMMON-LISP-USER::REA
+; 
+; compilation unit finished
+;   Undefined function:
+;     REA
+;   caught 1 STYLE-WARNING condition
+
+CL-USER> (read STREAM EOF-ERROR-P EOF-VALUE RECURSIVE-P)
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+CL-USER> (wirh-)
+(wirh-)
+; in: WIRH-
+;     (WIRH-)
+; 
+; caught STYLE-WARNING:
+;   undefined function: COMMON-LISP-USER::WIRH-
+; 
+; compilation unit finished
+;   Undefined function:
+;     WIRH-
+;   caught 1 STYLE-WARNING condition
+
+CL-USER> (with-input-from-string "VAR")
+(with-input-from-string "VAR")
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+CL-USER> (string-to-list "")
+(string-to-list "")
+NIL
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(string-to-list "")
+(string-to-list "")
+NIL
+
+CL-USER> 
+(string-to-list "(:init")
+(string-to-list "(:init")
+CL-USER> 
+(string-to-list "(init")
+(string-to-list "(init")
+CL-USER> 
+(string-to-list "init")
+(string-to-list "init")
+(INIT)
+
+CL-USER> (read-from-string "test")
+(read-from-string "test")
+TEST
+
+4
+
+CL-USER> 
+(read-from-string ":test")
+(read-from-string ":test")
+:TEST
+
+5
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN STRING-TO-LIST
+;     (READ-FROM-STRING STRING STR)
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP:STRING
+; 
+; compilation unit finished
+;   Undefined variable:
+;     STRING
+;   caught 1 WARNING condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN STRING-TO-LIST
+;     (READ-FROM-STRING STR)
+; 
+; caught WARNING:
+;   Derived type of #:STRING is
+;     (VALUES (OR STREAM BOOLEAN) &OPTIONAL),
+;   conflicting with its asserted type
+;     STRING.
+;   See also:
+;     The SBCL Manual, Node "Handling of Types"
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN STRING-TO-LIST
+;     (READ-FROM-STRING STR)
+; 
+; caught WARNING:
+;   Derived type of #:STRING is
+;     (VALUES (OR STREAM BOOLEAN) &OPTIONAL),
+;   conflicting with its asserted type
+;     STRING.
+;   See also:
+;     The SBCL Manual, Node "Handling of Types"
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+CL-USER> 
+(read-from-string "(:test")
+(read-from-string "(:test")
+CL-USER> 
+(read-from-string ":test")
+(read-from-string ":test")
+:TEST
+
+5
+
+CL-USER> (first (nth 10 domain))
+(first (nth 10 domain))
+CL-USER> (string-to-char )
+(string-to-char )
+; in: STRING-TO-CHAR
+;     (STRING-TO-CHAR)
+; 
+; caught STYLE-WARNING:
+;   undefined function: COMMON-LISP-USER::STRING-TO-CHAR
+; 
+; compilation unit finished
+;   Undefined function:
+;     STRING-TO-CHAR
+;   caught 1 STYLE-WARNING condition
+
+CL-USER> (append )
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN STRING-TO-LIST
+;     (READ-FROM-STRING STR)
+; 
+; caught WARNING:
+;   Derived type of #:STRING is
+;     (VALUES (OR STREAM BOOLEAN) &OPTIONAL),
+;   conflicting with its asserted type
+;     STRING.
+;   See also:
+;     The SBCL Manual, Node "Handling of Types"
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+CL-USER> (append "(:init")
+(append "(:init")
+"(:init"
+
+CL-USER> (string-right-trim '(#\") "(:init")
+(string-right-trim '(#\") "(:init")
+"(:init"
+
+CL-USER> 
+(string-right-trim '(#\() "(:init")
+(string-right-trim '(#\() "(:init")
+"(:init"
+
+CL-USER> 
+(string-right-trim '(#\t) "(:init")
+(string-right-trim '(#\t) "(:init")
+(string-right-trim '(#\t) "(:init")
+"(:ini"
+
+CL-USER> 
+"(:ini"
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN STRING-TO-LIST
+;     (READ-FROM-STRING STR)
+; 
+; caught WARNING:
+;   Derived type of #:STRING is
+;     (VALUES (OR STREAM BOOLEAN) &OPTIONAL),
+;   conflicting with its asserted type
+;     STRING.
+;   See also:
+;     The SBCL Manual, Node "Handling of Types"
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+(split "(:init" problem '())
+CL-USER> 
+CL-USER> (concatenate SEQUENCES)
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN STRING-TO-LIST
+;     (READ-FROM-STRING STR)
+; 
+; caught WARNING:
+;   Derived type of #:STRING is
+;     (VALUES (OR STREAM BOOLEAN) &OPTIONAL),
+;   conflicting with its asserted type
+;     STRING.
+;   See also:
+;     The SBCL Manual, Node "Handling of Types"
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN STRING-TO-LIST
+;     (READ-FROM-STRING STR)
+; 
+; caught WARNING:
+;   Derived type of #:STRING is
+;     (VALUES (OR STREAM BOOLEAN) &OPTIONAL),
+;   conflicting with its asserted type
+;     STRING.
+;   See also:
+;     The SBCL Manual, Node "Handling of Types"
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+(("(:init" "(at-location lh)))"))
+
+CL-USER> concar
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN SPLIT
+;     (CONCATSTRING LIST (APPEND RETLIST (LIST TEMPLIST)))
+; 
+; caught STYLE-WARNING:
+;   The function CONCATSTRING is called with two arguments, but wants exactly one.
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN SPLIT
+;     (CONCATSTRING LIST (APPEND RETLIST (LIST TEMPLIST)))
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP:LIST
+; 
+; compilation unit finished
+;   Undefined variable:
+;     LIST
+;   caught 1 WARNING condition
+;   caught 1 STYLE-WARNING condition
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+""
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+CL-USER> 
+
+"" 
+(("(:init" "(at-location lh)))"))
+
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+"" 
+(("(:init" "(at-location lh)))"))
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+"(:init(at-location lh)))" 
+(("(:init" "(at-location lh)))"))
+
+CL-USER> 
+(split "(:action" domain '())
+(split "(:action" domain '())
+
+"(:action get-to :parameters (?lk - location):precondition (not (at-location ?lk)):effect (at-location ?lk))" 
+"(:action get-to :parameters (?lk - location):precondition (not (at-location ?lk)):effect (at-location ?lk))" 
+"(:action get-to :parameters (?lk - location):precondition (not (at-location ?lk)):effect (at-location ?lk))" 
+"(:action get-to :parameters (?lk - location):precondition (not (at-location ?lk)):effect (at-location ?lk))" 
+"(:action get-to :parameters (?lk - location):precondition (not (at-location ?lk)):effect (at-location ?lk))" 
+(("(:action get-to " ":parameters (?lk - location)"
+  ":precondition (not (at-location ?lk))" ":effect (at-location ?lk))")
+ ("(:action pick-up" ":parameters (?o - object ?lk - location)"
+  ":precondition (and(not (in-hand ?o)) (at-location ?lk))"
+  ":effect (in-hand ?o))")
+ ("(:action turn-on" ":parameters (?k - kettle ?w - water)"
+  ":precondition (is-in ?w ?k)" ":effect (hot ?w)" ")")
+ ("(:action put-in" ":parameters (?o1 ?o2 - object)"
+  ":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))"
+  ":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))")
+ ("(:action pour-water" ":parameters (?w - water ?c - cup ?k - kettle)"
+  ":precondition (and (hot ?w) (in-hand ?k))" ":effect (is-in ?w ?c)))"))
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:action" domain '())
+(split "(:action" domain '())
+(("(:action get-to " ":parameters (?lk - location)"
+  ":precondition (not (at-location ?lk))" ":effect (at-location ?lk))")
+ ("(:action pick-up" ":parameters (?o - object ?lk - location)"
+  ":precondition (and(not (in-hand ?o)) (at-location ?lk))"
+  ":effect (in-hand ?o))")
+ ("(:action turn-on" ":parameters (?k - kettle ?w - water)"
+  ":precondition (is-in ?w ?k)" ":effect (hot ?w)" ")")
+ ("(:action put-in" ":parameters (?o1 ?o2 - object)"
+  ":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))"
+  ":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))")
+ ("(:action pour-water" ":parameters (?w - water ?c - cup ?k - kettle)"
+  ":precondition (and (hot ?w) (in-hand ?k))" ":effect (is-in ?w ?c)))"))
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:action" domain '())
+(split "(:action" domain '())
+
+"(:action get-to :parameters (?lk - location):precondition (not (at-location ?lk)):effect (at-location ?lk))" 
+"(:action get-to :parameters (?lk - location):precondition (not (at-location ?lk)):effect (at-location ?lk))" 
+"(:action get-to :parameters (?lk - location):precondition (not (at-location ?lk)):effect (at-location ?lk))" 
+"(:action get-to :parameters (?lk - location):precondition (not (at-location ?lk)):effect (at-location ?lk))" 
+"(:action get-to :parameters (?lk - location):precondition (not (at-location ?lk)):effect (at-location ?lk))" 
+(("(:action get-to " ":parameters (?lk - location)"
+  ":precondition (not (at-location ?lk))" ":effect (at-location ?lk))")
+ ("(:action pick-up" ":parameters (?o - object ?lk - location)"
+  ":precondition (and(not (in-hand ?o)) (at-location ?lk))"
+  ":effect (in-hand ?o))")
+ ("(:action turn-on" ":parameters (?k - kettle ?w - water)"
+  ":precondition (is-in ?w ?k)" ":effect (hot ?w)" ")")
+ ("(:action put-in" ":parameters (?o1 ?o2 - object)"
+  ":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))"
+  ":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))")
+ ("(:action pour-water" ":parameters (?w - water ?c - cup ?k - kettle)"
+  ":precondition (and (hot ?w) (in-hand ?k))" ":effect (is-in ?w ?c)))"))
+
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+
+"(:init(at-location lh)))" 
+(("(:init" "(at-location lh)))"))
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+"(:init(at-location lh)))"
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:action" domain '())
+(split "(:action" domain '())
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:action" domain '())
+(split "(:action" domain '())
+("")
+
+CL-USER> 
+(split "(:init" problem '())
+(split "(:init" problem '())
+("(:init(at-location lh)))")
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:action" domain '())
+(split "(:action" domain '())
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+(split "(:action" domain '())
+(split "(:action" domain '())
+
+"(:action get-to :parameters (?lk - location):precondition (not (at-location ?lk)):effect (at-location ?lk))" 
+"(:action get-to :parameters (?lk - location):precondition (not (at-location ?lk)):effect (at-location ?lk))" 
+"(:action get-to :parameters (?lk - location):precondition (not (at-location ?lk)):effect (at-location ?lk))" 
+"(:action get-to :parameters (?lk - location):precondition (not (at-location ?lk)):effect (at-location ?lk))" 
+"(:action get-to :parameters (?lk - location):precondition (not (at-location ?lk)):effect (at-location ?lk))" 
+(("(:action get-to " ":parameters (?lk - location)"
+  ":precondition (not (at-location ?lk))" ":effect (at-location ?lk))")
+ ("(:action pick-up" ":parameters (?o - object ?lk - location)"
+  ":precondition (and(not (in-hand ?o)) (at-location ?lk))"
+  ":effect (in-hand ?o))")
+ ("(:action turn-on" ":parameters (?k - kettle ?w - water)"
+  ":precondition (is-in ?w ?k)" ":effect (hot ?w)" ")")
+ ("(:action put-in" ":parameters (?o1 ?o2 - object)"
+  ":precondition (and (not (is-in ?o1 ?o2)) (in-hand ?o1))"
+  ":effect (and(is-in ?o1 ?o2) (not(in-hand ?o1))))")
+ ("(:action pour-water" ":parameters (?w - water ?c - cup ?k - kettle)"
+  ":precondition (and (hot ?w) (in-hand ?k))" ":effect (is-in ?w ?c)))"))
+
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN TRANSLATE-ACTIONS
+;     ((IF (EQ (FIRST ELEMENT) (FIRST KEYWORDS))
+;          ((SETQ ACTION #
+;                 #))))
+; 
+; caught ERROR:
+;   illegal function call
+
+;     (= ELEMENT NIL)
+; 
+; caught WARNING:
+;   Constant NIL conflicts with its asserted type NUMBER.
+;   See also:
+;     The SBCL Manual, Node "Handling of Types"
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN TRANSLATE-ACTIONS
+;     (SETQ ACTION 'NIL)
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::ACTION
+
+;     (SETQ CURRENT-KEYWORD 'NIL)
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::CURRENT-KEYWORD
+
+;     (SETQ HTN-ACTIONS-COPY HTN-ACTIONS)
+; ==>
+;   (SET 'HTN-ACTIONS-COPY HTN-ACTIONS)
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::HTN-ACTIONS
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::HTN-ACTIONS-COPY
+
+;     (SETQ KEYWORDS '(:ACTION :PARAMETERS :PRECONDITION :EFFECT))
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::KEYWORDS
+
+;     (DEFUN TRANSLATE-ACTIONS ()
+;       (SETQ ACTION 'NIL)
+;       (SETQ KEYWORDS '(:ACTION :PARAMETERS :PRECONDITION :EFFECT))
+;       (SETQ CURRENT-KEYWORD 'NIL)
+;       (SETQ HTN-ACTIONS-COPY HTN-ACTIONS)
+;       (LOOP FOR ELEMENT IN HTN-ACTIONS-COPY
+;             DO (LOOP WHILE (NOT (= ELEMENT NIL))
+;                      DO ((IF #
+;                              #))))
+;       (SETQ HTN-ACTIONS-COPY 'NIL)
+;       STRIPS-ACTIONS)
+; ==>
+;   (BLOCK TRANSLATE-ACTIONS
+;     (SETQ ACTION 'NIL)
+;     (SETQ KEYWORDS '(:ACTION :PARAMETERS :PRECONDITION :EFFECT))
+;     (SETQ CURRENT-KEYWORD 'NIL)
+;     (SETQ HTN-ACTIONS-COPY HTN-ACTIONS)
+;     (LOOP FOR ELEMENT IN HTN-ACTIONS-COPY
+;           DO (LOOP WHILE (NOT (= ELEMENT NIL))
+;                    DO ((IF #
+;                            #))))
+;     (SETQ HTN-ACTIONS-COPY 'NIL)
+;     STRIPS-ACTIONS)
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::STRIPS-ACTIONS
+; 
+; compilation unit finished
+;   Undefined variables:
+;     ACTION CURRENT-KEYWORD HTN-ACTIONS HTN-ACTIONS-COPY KEYWORDS STRIPS-ACTIONS
+;   caught 1 ERROR condition
+;   caught 7 WARNING conditions
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
+;; Loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN TRANSLATE-ACTIONS
+;     ((IF (EQ (FIRST ELEMENT) (FIRST KEYWORDS))
+;          ((SETQ ACTION #
+;                 #))))
+; 
+; caught ERROR:
+;   illegal function call
+
+;     (= ELEMENT NIL)
+; 
+; caught WARNING:
+;   Constant NIL conflicts with its asserted type NUMBER.
+;   See also:
+;     The SBCL Manual, Node "Handling of Types"
+
+; file: e:/Ausgelagert/projekt/git/htn2strips.lisp
+; in: DEFUN TRANSLATE-ACTIONS
+;     (SETQ ACTION 'NIL)
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::ACTION
+
+;     (SETQ CURRENT-KEYWORD 'NIL)
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::CURRENT-KEYWORD
+
+;     (SETQ HTN-ACTIONS-COPY HTN-ACTIONS)
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::HTN-ACTIONS-COPY
+
+;     (SETQ KEYWORDS '(:ACTION :PARAMETERS :PRECONDITION :EFFECT))
+; 
+; caught WARNING:
+;   undefined variable: COMMON-LISP-USER::KEYWORDS
+; 
+; compilation unit finished
+;   Undefined variables:
+;     ACTION CURRENT-KEYWORD HTN-ACTIONS-COPY KEYWORDS
+;   caught 1 ERROR condition
+;   caught 5 WARNING conditions
+
+;; Done loading e:\Ausgelagert\projekt\git\htn2strips.lisp
+CL-USER> 
