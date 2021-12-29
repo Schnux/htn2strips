@@ -13,23 +13,18 @@
 
 (defun htn2strips (domain-file problem-file)
 
-  (read-domain-file domain-file)
-  (read-problem-file problem-file)
-  (setq *htn-task* (get-htn *domain* 'is-task))
-  (setq *htn-method* (get-htn *domain* 'is-method))
-  (setq *htn-action* (get-htn *domain* 'is-action)))
+  ;read and save domain/problem hddl file
+  (setq *domain* (read-file domain-file))
+  (setq *problem* (read-file problem-file))
 
-(defun read-domain-file (filename)
-  (setq *domain* '())
-  (with-open-file (stream filename)
-    (setq *domain* (read stream)))
-  *domain*)
+  ;get and save tasks, methods and actions in lists
+  (setq *htn-task* (get-from-htn *domain* 'is-task))
+  (setq *htn-method* (get-from-htn *domain* 'is-method))
+  (setq *htn-action* (get-from-htn *domain* 'is-action)))
 
-(defun read-problem-file (filename)
-  (setq *problem* '())
+(defun read-file (filename)
   (with-open-file (stream filename)
-    (setq *problem* (read stream)))
-  *problem*)
+    (read stream)))
 
 (defun is-task (input)
   (eq input ':task))
@@ -40,7 +35,10 @@
 (defun is-action (input)
   (eq input ':action))
 
-(defun get-htn (list key-word)
+(defun is-init (input)
+  (eq input ':init))
+
+(defun get-from-htn (list key-word)
   (remove-if-not key-word (cdr list) :key #'first))
 
 
