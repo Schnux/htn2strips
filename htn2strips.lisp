@@ -10,6 +10,8 @@
 (defvar *strips-method* '())
 (defvar *htn-action* '())
 (defvar *strips-action* '())
+(defvar *htn-init* '())
+(defvar *strips-init* '())
 
 (defun htn2strips (domain-file problem-file)
 
@@ -20,7 +22,8 @@
   ;get and save tasks, methods and actions in lists
   (setq *htn-task* (get-from-htn *domain* 'is-task))
   (setq *htn-method* (get-from-htn *domain* 'is-method))
-  (setq *htn-action* (get-from-htn *domain* 'is-action)))
+  (setq *htn-action* (get-from-htn *domain* 'is-action))
+  (setq *htn-init* (get-from-htn *problem* 'is-init)))
 
 (defun read-file (filename)
   (with-open-file (stream filename)
