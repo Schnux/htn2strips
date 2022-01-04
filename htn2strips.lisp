@@ -1,6 +1,4 @@
 ;(htn2strips "input/domain.hddl" "input/problem.hddl")
-;(split "(:init" problem '())
-;*..* für globle var
 
 (defvar *domain* '())
 (defvar *problem* '())
@@ -23,7 +21,10 @@
   (setq *htn-task* (get-from-htn *domain* 'is-task))
   (setq *htn-method* (get-from-htn *domain* 'is-method))
   (setq *htn-action* (get-from-htn *domain* 'is-action))
-  (setq *htn-init* (get-from-htn *problem* 'is-init)))
+  (setq *htn-init* (get-from-htn *problem* 'is-init))
+
+  ;transfrom htn to strips
+  (setq *strips-action* (translate-actions)))
 
 (defun read-file (filename)
   (with-open-file (stream filename)
@@ -53,38 +54,53 @@
         (postconditions '())
         (keywords '(:action :parameters :precondition :effect))
         (current-keyword '())
-        (htn-actions-copy htn-actions)))
-  (loop for element in htn-actions-copy do
-          ((loop while (not (= element nil))
-                 do ((if (eq (first element) (first keywords))
-                         ((setq action (append action (second element)) ;;adds the actionname to the list
-                                (setq element (remove element (first element)) ;; remove the :action keyword from the htn action
-                                      (setq element (remove element (first element))))))) ;; remove the actionname from the htn action
+        (htn-actions-copy *htn-action*)
+        (strips-actions '()))
+
+    (loop for element in htn-actions-copy do
+            (loop while (not (eq element NIL))
+                  do (if (eq (first element) (first keywords))
+                         (progn
+                          (setq action (append action (list (second element)))) ;;adds the actionname to the list
+                          (setq element (remove (first element) element)) ;; remove the :action keyword from the htn action
+                          (setq element (remove (first element) element))))
+                     ;; remove the actionname from the htn action
 
                      (if (eq (first element) (second keywords))
-                         ((setq current-keyword (second keywords))
-                          (setq element (remove element (first element)))))
+                         (progn
+                          (setq current-keyword (second keywords))
+                          (setq element (remove (first element) element))))
 
                      (if (eq (first element) (third keywords))
-                         ((setq current-keyword (third keywords))
-                          (setq element (remo+ve element (first element)))))
+                         (progn
+                          (setq current-keyword (third keywords))
+                          (setq element (remove (first element) element))))
+
+                     (if (eq (first element) (fourth keywords))
+                         (progn
+                          (setq current-keyword (fourth keywords))
+                          (setq element (remove (first element) element))))
 
                      (if (eq current-keyword (second keywords))
-                         ((setq params (append params (first element)))
-                          (setq element (remove element (first element)))))
+                         (progn
+                          (setq params (append params (first element)))
+                          (setq element (remove (first element) element))))
 
                      (if (eq current-keyword (third keywords))
-                         ((setq preconditions (append preconditions (first element)))
-                          (setq element (remove element (first element)))))
+                         (progn
+                          (setq preconditions (append preconditions (first element)))
+                          (setq element (remove (first element) element))))
 
                      (if (eq current-keyword (fourth keywords))
-                         ((setq postconditions (append postconditions (first element)))
-                          (setq element (remove element (first element)))))))
+                         (progn
+                          (setq postconditions (append postconditions (first element)))
+                          (setq element (remove (first element) element)))))
 
-           (setq action (append action params))
-           (setq action (append action preconditions))
-           (setq action (append action postconditions))
-           (setq strips-actions (append strips-actions action))))
+            (setq action (append action (list params)))
+            (setq action (append action (list preconditions)))
+            (setq action (append action (list postconditions)))
+            (setq strips-actions (append strips-actions (list action)))
+            (setq action '()))
 
-  (setq htn-actions-copy '())
-  strips-actions)
+    (setq htn-actions-copy '())
+    strips-actions))
