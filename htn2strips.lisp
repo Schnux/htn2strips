@@ -11,11 +11,25 @@
 (defvar *htn-init* '())
 (defvar *strips-init* '())
 
-(defun htn2strips (domain-file problem-file)
+(defun not-reader (stream char)
+  (let ((s stream))
+    (if (eq (read s) 'OT)
+        '!
+        (unread-char char stream))))
 
-  ;read and save domain/problem hddl file
-  (setq *domain* (read-file domain-file))
-  (setq *problem* (read-file problem-file))
+(defun question-reader (stream char)
+  (declare (ignore char))
+  (read stream))
+
+(defun htn2strips (domain-file problem-file)
+  (let ((*readtable* (copy-readtable)))
+
+    (set-macro-character #\n #'not-reader t)
+    (set-macro-character #\? #'question-reader)
+
+    ;read and save domain/problem hddl file
+    (setq *domain* (read-file domain-file))
+    (setq *problem* (read-file problem-file)))
 
   ;get and save tasks, methods and actions in lists
   (setq *htn-task* (get-from-htn *domain* 'is-task))
@@ -24,7 +38,9 @@
   (setq *htn-init* (get-from-htn *problem* 'is-init))
 
   ;transfrom htn to strips
-  (setq *strips-action* (translate-actions)))
+  (setq *strips-action* (translate-actions))
+
+  (print "Complete"))
 
 (defun read-file (filename)
   (with-open-file (stream filename)
@@ -44,7 +60,6 @@
 
 (defun get-from-htn (list key-word)
   (remove-if-not key-word (cdr list) :key #'first))
-
 
 ;; translating the actions
 (defun translate-actions ()
@@ -99,6 +114,9 @@
             (setq action (append action (list params)))
             (setq action (append action (list preconditions)))
             (setq action (append action (list postconditions)))
+            (setq params '())
+            (setq preconditions '())
+            (setq postconditions '())
             (setq strips-actions (append strips-actions (list action)))
             (setq action '()))
 
