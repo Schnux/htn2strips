@@ -27,7 +27,7 @@
   (setq *htn-task* (get-from-htn *domain* 'is-task))
   (setq *htn-method* (get-from-htn *domain* 'is-method))
   (setq *htn-action* (get-from-htn *domain* 'is-action))
-  (setq *htn-init* (get-from-htn *problem* 'is-init))
+  (setq *htn-init* (first (get-from-htn *problem* 'is-init)))
 
   ;transfrom htn to strips
   (setq *strips-action* (translate-actions))
@@ -103,7 +103,7 @@
                           (setq postconditions (append postconditions (first element)))
                           (setq element (remove (first element) element)))))
 
-            (setq action (append action (list params)))
+            (setq action (append action (list (remove-dash '- params))))
             (setq action (append action (list preconditions)))
             (setq action (append action (list postconditions)))
             (setq params '())
@@ -114,3 +114,25 @@
 
     (setq htn-actions-copy '())
     strips-actions))
+
+(defun remove-dash (item list)
+  (cond ((null list) nil)
+        ((equal item (first list))
+         (remove-dash item (cdr (rest list))))
+        (T (cons (first list)
+                 (remove-dash item (rest list))))))
+
+(defun write-file ()
+  (with-open-file (file #P"output.strips" :direction :output
+                        :if-exists :supersede
+                        :if-does-not-exist :create)
+    (format file "Initial state: ")
+    (loop for element in (cdr *htn-init*) do
+            (format file "~A" (first element))
+            (format file "(~A)" (second element)))
+    (format file "~{~a~^, ~}" (cdr *htn-init*))
+
+    (fresh-line file)
+    (format file "Goal state: ")
+    (fresh-line file)
+    (format file "Actions: ")))
