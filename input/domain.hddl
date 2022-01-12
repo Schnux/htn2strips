@@ -37,9 +37,9 @@
 	))
 
 	(:action get-to 
-		:parameters (?lk - location)
-		:precondition (not (at-location ?lk))
-		:effect (at-location ?lk))
+		:parameters (?lk ?lz  - location)
+		:precondition (and (not (at-location ?lk)) (at-location ?lz))
+		:effect (and (at-location ?lk) (not (at-location ?lz))))
 
 	(:action pick-up
 		:parameters (?o - object ?lk - location)

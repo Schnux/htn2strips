@@ -27,7 +27,7 @@
   (setq *htn-task* (get-from-htn *domain* 'is-task))
   (setq *htn-method* (get-from-htn *domain* 'is-method))
   (setq *htn-action* (get-from-htn *domain* 'is-action))
-  (setq *htn-init* (first (get-from-htn *problem* 'is-init)))
+  (setq *htn-init* (cdr (first (get-from-htn *problem* 'is-init))))
 
   ;transfrom htn to strips
   (setq *strips-action* (translate-actions))
@@ -127,10 +127,12 @@
                         :if-exists :supersede
                         :if-does-not-exist :create)
     (format file "Initial state: ")
-    (loop for element in (cdr *htn-init*) do
-            (format file "~A" (first element))
-            (format file "(~A)" (second element)))
-    (format file "~{~a~^, ~}" (cdr *htn-init*))
+    (let ((i 0))
+      (loop for element in *htn-init* do
+              (setq i (1+ i))
+              (format file "~{~a(~a)~}" element)
+              (if (< i (length *htn-init*))
+                  (format file ","))))
 
     (fresh-line file)
     (format file "Goal state: ")
