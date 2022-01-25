@@ -106,7 +106,7 @@
                           (setq postconditions (append postconditions (first element)))
                           (setq element (remove (first element) element)))))
 
-            (setq action (append action (list (remove-dash '- params))))
+            (setq action (append action (list (remove-item-and-next '- params))))
             (setq action (append action (list preconditions)))
             (setq action (append action (list postconditions)))
             (setq params '())
@@ -168,7 +168,7 @@
                           (setq subtasks (append subtasks (first element)))
                           (setq element (remove (first element) element)))))
 
-            (setq hmethod (append hmethod (list (remove-dash '- params))))
+            (setq hmethod (append hmethod (list (remove-item-and-next '- params))))
             (setq hmethod (append hmethod (list task)))
             (setq hmethod (append hmethod (list subtasks)))
 
@@ -180,12 +180,12 @@
 
     strips-methods))
 
-(defun remove-dash (item list)
+(defun remove-item-and-next (item list)
   (cond ((null list) nil)
         ((equal item (first list))
-         (remove-dash item (cdr (rest list))))
+         (remove-item-and-next item (cdr (rest list))))
         (T (cons (first list)
-                 (remove-dash item (rest list))))))
+                 (remove-item-and-next item (rest list))))))
 
 (defun remove-hyphen (h-list)
   (first (string-to-list (remove #\- (write-to-string h-list)))))
@@ -219,7 +219,7 @@
     (let ((i 0))
       (loop for element in *strips-action* do
               (setq i (1+ i))
-              (format file "~12,0T~a " (first element))
+              (format file "~12,0T~a" (first element))
               (format file "(~{~a~^,~})~%" (second element))
               (fresh-line file)
               (format file "~12,0TPreconditions: ")

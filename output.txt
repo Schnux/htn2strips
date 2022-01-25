@@ -1,23 +1,23 @@
 Initial state: AT-LOCATION(LH)
 Goal state: 
 Actions:
-            GETTO (LK,LZ,LOCATION)
+            GETTO(LK,LZ,LOCATION)
             Preconditions: 
             Postconditions: 
 
-            PICKUP (O,OBJECT,LK,LOCATION)
+            PICKUP(O,OBJECT,LK,LOCATION)
             Preconditions: 
             Postconditions: 
 
-            TURNON (K,KETTLE,W,WATER)
+            TURNON(K,KETTLE,W,WATER)
             Preconditions: 
             Postconditions: 
 
-            PUTIN (O1,O2,OBJECT)
+            PUTIN(O1,O2,OBJECT)
             Preconditions: 
             Postconditions: 
 
-            POURWATER (W,WATER,C,CUP,K,KETTLE)
+            POURWATER(W,WATER,C,CUP,K,KETTLE)
             Preconditions: 
             Postconditions: 
 
