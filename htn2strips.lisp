@@ -50,9 +50,8 @@
   (setq *strips-method* (parse-methods *htn-method*))
   (setq *strips-task* (parse-tasks *htn-task*))
 
-  ;; Geht nicht - Fixen!
-  ;;(setq *strips-action* (de-hyphenate-symbols *strips-action*))
-  ;; Complete doppelt, da auch zurÃ¼ckgegeben und evaluiert
+  (write-file)
+
   "Complete")
 
 (defun read-file (filename)
@@ -84,7 +83,7 @@
          :parameters (remove-item-and-next '- (parse-it :parameters element))
          :name (remove-hyphen (second element))
          :preconditions (remove-hyphen (parse-it :precondition element))
-         :postconditions (remove-hyphen (parse-it :effects element)))))
+         :postconditions (remove-hyphen (parse-it :effect element)))))
 
 (defun parse-methods (htn-methods)
   (loop for element in htn-methods
@@ -129,22 +128,60 @@
     (fresh-line file)
     (format file "Goal state: ")
     (fresh-line file)
-    ;;actions
     (format file "Actions:")
     (fresh-line file)
-    (let ((i 0))
-      (loop for element in *strips-action* do
-              (setq i (1+ i))
-              (format file "~12,0T~a" (first element))
-              (format file "(~{~a~^,~})~%" (second element))
-              (fresh-line file)
-              (format file "~12,0TPreconditions: ")
-              (fresh-line file)
-              (format file "~12,0TPostconditions: ")
-              (if (< i (length *htn-init*))
-                  (format file ","))
-              (fresh-line file)
-              (terpri file)))))
+    ;;methods
+
+    ;;actions
+    (loop for action in *strips-action* do
+            (format file "~12,0T~a" (strips-action-name action))
+            (format file "(~{~a~^,~})~%" (strips-action-parameters action))
+            (fresh-line file)
+            (format file "~12,0TPreconditions: ")
+            (format file "~a" (process-conditions (strips-action-preconditions action)))
+            (fresh-line file)
+            (format file "~12,0TPostconditions: ")
+            (format file "~a" (process-conditions (strips-action-postconditions action)))
+            (fresh-line file)
+            (terpri file))))
+
+(defun process-conditions (conditions)
+  (if (eq (first conditions) 'AND)
+      (progn
+       (let ((result "")
+             (i 0))
+
+         (loop for elem in (cdr conditions) do
+                 (if (eq (first elem) '!)
+                     (setq result (concatenate 'string
+                                               result
+                                               (format nil "~a" (first elem))
+                                               (format nil "~a" (first (first (cdr elem))))
+                                               (format nil "(~{~a~^, ~})" (cdr (first (cdr elem))))))
+                     (progn
+                      (setq result (concatenate
+                                    'string
+                                    result
+                                    (format nil "~a" (first elem))
+                                    (format nil "(~{~a~^, ~})" (cdr elem))))))
+                 (setq i (1+ i))
+                 (if (< i (length (cdr conditions)))
+                     (setq result (concatenate 'string
+                                               result
+                                               (format nil ",")))))
+         result))
+      (progn
+       (if (eq (first conditions) '!)
+           (progn
+            (concatenate 'string
+                         (format nil "~a" (first conditions))
+                         (format nil "~a" (first (first (cdr conditions))))
+                         (format nil "(~{~a~^, ~})" (cdr (first (cdr conditions))))))
+           (progn
+            (concatenate
+             'string
+             (format nil "~a" (first conditions))
+             (format nil "(~{~a~^, ~})" (cdr conditions))))))))
 
 (defun add-prefix-to-element (prefix element)
   (first (string-to-list (concatenate 'String prefix (write-to-string (first element))))))
