@@ -1,6 +1,14 @@
 Initial state: AT-LOCATION(LH)
 Goal state: 
 Actions:
+            MMBREWTEA(LK,C,K,W,T)
+            Preconditions: 
+            Postconditions: TBREWTEA(LK, C, K, W, T)
+
+            MMBOILWATER(K,W,LK)
+            Preconditions: 
+            Postconditions: TBOILWATER(K, W, LK)
+
             GETTO(LK,LZ)
             Preconditions: !ATLOCATION(LK),ATLOCATION(LZ)
             Postconditions: ATLOCATION(LK),!ATLOCATION(LZ)

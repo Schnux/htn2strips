@@ -131,7 +131,16 @@
     (format file "Actions:")
     (fresh-line file)
     ;;methods
-
+    (loop for method in *strips-method* do
+            (format file "~12,0T~a" (strips-method-name method))
+            (format file "(~{~a~^,~})~%" (strips-method-parameters method))
+            (fresh-line file)
+            (format file "~12,0TPreconditions: ")
+            (fresh-line file)
+            (format file "~12,0TPostconditions: ")
+            (format file "T~a" (process-conditions (strips-method-task method)))
+            (fresh-line file)
+            (terpri file))
     ;;actions
     (loop for action in *strips-action* do
             (format file "~12,0T~a" (strips-action-name action))
