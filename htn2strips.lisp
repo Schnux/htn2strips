@@ -19,7 +19,7 @@
 
 (defstruct strips-method
   name
-  task
+  postconditions
   subtasks
   parameters)
 
@@ -91,7 +91,7 @@
         (make-strips-method
          :parameters (remove-item-and-next '- (parse-it :parameters element))
          :name (add-prefix-to-element "M" (list (remove-hyphen (second element))))
-         :task (remove-hyphen (parse-it :task element))
+         :postconditions (remove-hyphen (parse-it :task element))
          :subtasks (remove-hyphen (parse-it :subtasks element)))))
 
 (defun parse-tasks (htn-tasks)
@@ -134,63 +134,39 @@
     (loop for method in *strips-method* do
             (format file "~12,0T~a" (strips-method-name method))
             (format file "(~{~a~^,~})~%" (strips-method-parameters method))
-            (fresh-line file)
-            (format file "~12,0TPreconditions: ")
-            (fresh-line file)
+            (format file "~12,0TPreconditions: ~%")
             (format file "~12,0TPostconditions: ")
-            (format file "T~a" (process-conditions (strips-method-task method)))
+            (format file "T~a" (process-conditions (strips-method-postconditions method) (make-array 0 :element-type 'character :fill-pointer 0)))
             (fresh-line file)
             (terpri file))
     ;;actions
     (loop for action in *strips-action* do
             (format file "~12,0T~a" (strips-action-name action))
             (format file "(~{~a~^,~})~%" (strips-action-parameters action))
-            (fresh-line file)
             (format file "~12,0TPreconditions: ")
-            (format file "~a" (process-conditions (strips-action-preconditions action)))
-            (fresh-line file)
+            (format file "~a ~%" (process-conditions (strips-action-preconditions action) (make-array 0 :element-type 'character :fill-pointer 0)))
             (format file "~12,0TPostconditions: ")
-            (format file "~a" (process-conditions (strips-action-postconditions action)))
-            (fresh-line file)
+            (format file "~a ~%" (process-conditions (strips-action-postconditions action) (make-array 0 :element-type 'character :fill-pointer 0)))
             (terpri file))))
 
-(defun process-conditions (conditions)
-  (if (eq (first conditions) 'AND)
-      (progn
-       (let ((result "")
-             (i 0))
+(defun process-conditions (conditions stream)
+  (cond ;; re-format AND: (AND x y z) -> x, y, z
+   ((eq (first conditions) 'AND)
+    (loop for elem in (butlast (rest conditions))
+          finally (process-conditions (first (last (rest conditions))) stream)
+          do (process-conditions elem stream)
+             (format stream ",")) stream)
 
-         (loop for elem in (cdr conditions) do
-                 (if (eq (first elem) '!)
-                     (setq result (concatenate 'string
-                                               result
-                                               (format nil "~a" (first elem))
-                                               (format nil "~a" (first (first (cdr elem))))
-                                               (format nil "(~{~a~^, ~})" (cdr (first (cdr elem))))))
-                     (progn
-                      (setq result (concatenate
-                                    'string
-                                    result
-                                    (format nil "~a" (first elem))
-                                    (format nil "(~{~a~^, ~})" (cdr elem))))))
-                 (setq i (1+ i))
-                 (if (< i (length (cdr conditions)))
-                     (setq result (concatenate 'string
-                                               result
-                                               (format nil ",")))))
-         result))
-      (progn
-       (if (eq (first conditions) '!)
-           (progn
-            (concatenate 'string
-                         (format nil "~a" (first conditions))
-                         (format nil "~a" (first (first (cdr conditions))))
-                         (format nil "(~{~a~^, ~})" (cdr (first (cdr conditions))))))
-           (progn
-            (concatenate
-             'string
-             (format nil "~a" (first conditions))
-             (format nil "(~{~a~^, ~})" (cdr conditions))))))))
+   ((eq (first conditions) '!)
+
+    (format stream "~a~a(~{~a~^,~})"
+            (first conditions)
+            (first (first (cdr conditions)))
+            (cdr (first (cdr conditions)))) stream)
+   (T
+    (format stream "~a(~{~a~^,~})"
+            (first conditions)
+            (cdr conditions)) stream)))
 
 (defun add-prefix-to-element (prefix element)
   (first (string-to-list (concatenate 'String prefix (write-to-string (first element))))))

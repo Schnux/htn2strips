@@ -3,29 +3,29 @@ Goal state:
 Actions:
             MMBREWTEA(LK,C,K,W,T)
             Preconditions: 
-            Postconditions: TBREWTEA(LK, C, K, W, T)
+            Postconditions: TBREWTEA(LK,C,K,W,T)
 
             MMBOILWATER(K,W,LK)
             Preconditions: 
-            Postconditions: TBOILWATER(K, W, LK)
+            Postconditions: TBOILWATER(K,W,LK)
 
             GETTO(LK,LZ)
-            Preconditions: !ATLOCATION(LK),ATLOCATION(LZ)
-            Postconditions: ATLOCATION(LK),!ATLOCATION(LZ)
+            Preconditions: !ATLOCATION(LK),ATLOCATION(LZ) 
+            Postconditions: ATLOCATION(LK),!ATLOCATION(LZ) 
 
             PICKUP(O,LK)
-            Preconditions: !INHAND(O),ATLOCATION(LK)
-            Postconditions: INHAND(O)
+            Preconditions: !INHAND(O),ATLOCATION(LK) 
+            Postconditions: INHAND(O) 
 
             TURNON(K,W)
-            Preconditions: ISIN(W, K)
-            Postconditions: HOT(W)
+            Preconditions: ISIN(W,K) 
+            Postconditions: HOT(W) 
 
             PUTIN(O1,O2)
-            Preconditions: !ISIN(O1, O2),INHAND(O1)
-            Postconditions: ISIN(O1, O2),!INHAND(O1)
+            Preconditions: !ISIN(O1,O2),INHAND(O1) 
+            Postconditions: ISIN(O1,O2),!INHAND(O1) 
 
             POURWATER(W,C,K)
-            Preconditions: HOT(W),INHAND(K)
-            Postconditions: ISIN(W, C)
+            Preconditions: HOT(W),INHAND(K) 
+            Postconditions: ISIN(W,C) 
 
