@@ -92,7 +92,7 @@
          :parameters (remove-item-and-next '- (parse-it :parameters element))
          :name (add-prefix-to-element "M" (list (remove-hyphen (second element))))
          :postconditions (remove-hyphen (parse-it :task element))
-         :subtasks (remove-hyphen (parse-it :subtasks element)))))
+         :subtasks (change-name (remove-hyphen (parse-it :subtasks element))))))
 
 (defun parse-tasks (htn-tasks)
   (loop for element in htn-tasks
@@ -100,6 +100,25 @@
         (make-strips-task
          :parameters (remove-item-and-next '- (parse-it :parameters element))
          :name (add-prefix-to-element "T" (list (remove-hyphen (second element)))))))
+
+
+;;TODO
+;; - Names with and
+;; - find right params
+(defun change-name (precon-list)
+  (let ((res (list 'AND)))
+    (loop for elem in (cdr precon-list) do
+            (setq res (append res (list (append (list (find-postcondition (first elem))) (cdr elem))))))
+    res))
+
+(defun find-postcondition-name (name)
+  (let ((res))
+    (loop for elem in *strips-action* do
+            (cond
+             ((eq name (strips-action-name elem)) (setq res (strips-action-postconditions elem)))))
+    (cond ((eq (first res) 'AND) 'WIP)
+          ((eq res NIL) (add-prefix-to-element "T" (list name)))
+          (T (first res)))))
 
 (defun parse-it (keyword element)
   "grabs keyword definition from (:action foo .... :keyword x y)"
@@ -134,7 +153,8 @@
     (loop for method in *strips-method* do
             (format file "~12,0T~a" (strips-method-name method))
             (format file "(~{~a~^,~})~%" (strips-method-parameters method))
-            (format file "~12,0TPreconditions: ~%")
+            (format file "~12,0TPreconditions: ")
+            (format file "~a ~%" (process-conditions (strips-method-subtasks method) (make-array 0 :element-type 'character :fill-pointer 0)))
             (format file "~12,0TPostconditions: ")
             (format file "T~a" (process-conditions (strips-method-postconditions method) (make-array 0 :element-type 'character :fill-pointer 0)))
             (fresh-line file)

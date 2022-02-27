@@ -1,5 +1,5 @@
 (define (domain tea)
-	(:requirements :negative-preconditions :typing)
+	(:requirements :negative-preconditions :typing :hierarchy)
 	(:types cup location kettle water teabag - object)
 	(:predicates
 		(hot ?w - water)
@@ -20,9 +20,9 @@
 		:subtasks (and
 			 (get-to ?lk)
 			 (boil-water ?k ?w ?lk)
-			 (pick-up ?t ?lk)
+			 (pick-up ?t)
 			 (put-in ?t ?c)
-			 (pour-water ?w ?c ?k))
+			 (pour-water ?w ?c))
 		
 	)
 
@@ -30,10 +30,10 @@
 		:parameters (?k - kettle ?w - water ?lk - location)
 		:task (boil-water ?k ?w ?lk)
 		:subtasks (and
-			(pick-up ?w ?lk)
+			(pick-up ?w)
 			(put-in ?w ?k)
 			(turn-on ?k)
-			(pick-up ?k ?lk)
+			(pick-up ?k)
 	))
 
 	(:action get-to 
@@ -42,9 +42,9 @@
 		:effect (and (at-location ?lk) (not (at-location ?lz))))
 
 	(:action pick-up
-		:parameters (?o - object ?lk - location)
-		:precondition (and(not (in-hand ?o)) (at-location ?lk))
-		:effect (in-hand ?o))
+		:parameters (?o1 - object ?lk - location)
+		:precondition (and(not (in-hand ?o1)) (at-location ?lk))
+		:effect (in-hand ?o1))
 
 	(:action turn-on
 		:parameters (?k - kettle ?w - water)

@@ -3,7 +3,7 @@ Goal state: 	TBrewtea(kitchen,cup,kettle,water,tea)
 
 Actions:
 		MBrewtea(L,C,K,W,T)
-		Preconditions: Atlocation(L),TBoilwater(K,W,L),Isin(T,C),IsinP(W,C)
+		Preconditions: Atlocation(L),TBoilwater(K,W,L),Isin(T,C),Isin(W,C)
 		Postconditions: TBrewtea(L,C,K,W,T)
 		
 		MBoilwater(K,W,L)
@@ -28,4 +28,4 @@ Actions:
 	
 		Pourwater(W, C, K)
 		Preconditions: Hot(W), Inhand(K)
-		Postconditions: IsinP(W, C)
+		Postconditions: Isin(W, C)
