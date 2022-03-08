@@ -10,6 +10,8 @@
 (defvar *strips-action* '())
 (defvar *htn-init* '())
 (defvar *strips-init* '())
+(defvar *htn-goal* '())
+(defvar *strips-goal* '())
 
 (defstruct strips-action
   name
@@ -24,6 +26,14 @@
   parameters)
 
 (defstruct strips-task
+  name
+  parameters)
+
+(defstruct strips-init
+  name
+  parameters)
+
+(defstruct strips-goal
   name
   parameters)
 
@@ -44,11 +54,14 @@
   (setq *htn-method* (get-from-htn *domain* ':method))
   (setq *htn-action* (get-from-htn *domain* ':action))
   (setq *htn-init* (cdr (first (get-from-htn *problem* ':init))))
+  (setq *htn-goal* (parse-it :tasks (first (get-from-htn *problem* ':htn))))
 
   ;transfrom htn to strips
   (setq *strips-action* (parse-actions *htn-action*))
   (setq *strips-method* (parse-methods *htn-method*))
   (setq *strips-task* (parse-tasks *htn-task*))
+  (setq *strips-init* (parse-init *htn-init*))
+  (setq *strips-goal* (parse-goal *htn-goal*))
 
   (write-file)
 
@@ -83,7 +96,7 @@
          :parameters (remove-item-and-next '- (parse-it :parameters element))
          :name (remove-hyphen (second element))
          :preconditions (remove-hyphen (parse-it :precondition element))
-         :postconditions (remove-hyphen (parse-it :effect element)))))
+         :postconditions (empty-postconditions (remove-hyphen (parse-it :effect element)) element))))
 
 (defun parse-methods (htn-methods)
   (loop for element in htn-methods
@@ -101,24 +114,53 @@
          :parameters (remove-item-and-next '- (parse-it :parameters element))
          :name (add-prefix-to-element "T" (list (remove-hyphen (second element)))))))
 
+(defun parse-init (htn-init)
+  (loop for element in htn-init
+        collect
+        (make-strips-init
+         :parameters (remove-hyphen (cdr element))
+         :name (remove-hyphen (first element)))))
 
-;;TODO
-;; - Names with and
-;; - find right params
+(defun parse-goal (htn-goal)
+  (make-strips-goal
+   :parameters (remove-hyphen (cdr htn-goal))
+   :name (add-prefix-to-element "T" (list (remove-hyphen (first htn-goal))))))
+
+
+;; substitutes the Action- or Taskname with its first postive postcondition
 (defun change-name (precon-list)
   (let ((res (list 'AND)))
+    (cond
+     ((not (eq (first precon-list) 'AND)) (setq precon-list (append res (list precon-list)))))
     (loop for elem in (cdr precon-list) do
-            (setq res (append res (list (append (list (find-postcondition (first elem))) (cdr elem))))))
+            (setq res (append res (list (append (list (find-postcondition-name (first elem))) (cdr elem))))))
     res))
 
+
+;; Finds and returns the corispondent postcondition name of the Action/Task name
 (defun find-postcondition-name (name)
   (let ((res))
     (loop for elem in *strips-action* do
             (cond
              ((eq name (strips-action-name elem)) (setq res (strips-action-postconditions elem)))))
-    (cond ((eq (first res) 'AND) 'WIP)
-          ((eq res NIL) (add-prefix-to-element "T" (list name)))
+    (cond ((eq (first res) 'AND) (first (first (find-not-negative-conditions res))))
+          ((eq 0 (length res)) (add-prefix-to-element "T" (list name)))
           (T (first res)))))
+
+;; Finds postive conditions in a list of conditions and returns it
+(defun find-not-negative-conditions (cond)
+  (let ((res))
+    (loop for postcond in (cdr cond) do
+            (if (not (eq (first postcond) '!))
+                (setq res (append res (list postcond)))))
+    res))
+
+;; Set postcondition when postcondition from Action is empty
+(defun empty-postconditions (postcon-list elem)
+  (let ((name (remove-hyphen (parse-it :ACTION elem)))
+        (params (remove-item-and-next '- (parse-it :PARAMETERS elem))))
+    (cond ((eq nil postcon-list) (append (list (add-prefix-to-element "E" (list name))) params))
+          (T postcon-list))))
 
 (defun parse-it (keyword element)
   "grabs keyword definition from (:action foo .... :keyword x y)"
@@ -132,20 +174,27 @@
         (T (cons (first list)
                  (remove-item-and-next item (rest list))))))
 
+;;Formats and writes the resulting data to output.txt
 (defun write-file ()
   (with-open-file (file #P"output.txt" :direction :output
                         :if-exists :supersede
                         :if-does-not-exist :create)
-    (format file "Initial state: ")
     ;;init
-    (let ((i 0))
-      (loop for element in *htn-init* do
-              (setq i (1+ i))
-              (format file "~{~a(~a)~}" element)
-              (if (< i (length *htn-init*))
-                  (format file ","))))
+    (format file "Initial state: ")
+    (loop for init in (butlast *strips-init*)
+          finally
+          (format file "~12,0T~a" (strips-init-name (first (last *strips-init*))))
+          (format file "(~{~a~^,~})" (strips-init-parameters (first (last *strips-init*))))
+          do (format file "~12,0T~a" (strips-init-name init))
+             (format file "(~{~a~^,~})" (strips-init-parameters init))
+             (format file ","))
     (fresh-line file)
+    ;;goal
     (format file "Goal state: ")
+
+    (format file "~12,0T~a" (strips-goal-name *strips-goal*))
+    (format file "(~{~a~^,~})" (strips-goal-parameters *strips-goal*))
+
     (fresh-line file)
     (format file "Actions:")
     (fresh-line file)
@@ -156,8 +205,7 @@
             (format file "~12,0TPreconditions: ")
             (format file "~a ~%" (process-conditions (strips-method-subtasks method) (make-array 0 :element-type 'character :fill-pointer 0)))
             (format file "~12,0TPostconditions: ")
-            (format file "T~a" (process-conditions (strips-method-postconditions method) (make-array 0 :element-type 'character :fill-pointer 0)))
-            (fresh-line file)
+            (format file "T~a ~%" (process-conditions (strips-method-postconditions method) (make-array 0 :element-type 'character :fill-pointer 0)))
             (terpri file))
     ;;actions
     (loop for action in *strips-action* do
