@@ -17,7 +17,7 @@
 			?w - water
 			?t - teabag)
 		:task (brew-tea ?lk ?c ?k ?w ?t)
-		:subtasks (and
+		:ordered-subtasks (and
 			 (get-to ?lk)
 			 (boil-water ?k ?w ?lk)
 			 (pick-up ?t)
@@ -29,11 +29,11 @@
 	(:method m-boil-water
 		:parameters (?k - kettle ?w - water ?lk - location)
 		:task (boil-water ?k ?w ?lk)
-		:subtasks (and
+		:ordered-subtasks (and
+			(pick-up ?k)
 			(pick-up ?w)
 			(put-in ?w ?k)
 			(turn-on ?k)
-			(pick-up ?k)
 	))
 
 	(:action get-to 
