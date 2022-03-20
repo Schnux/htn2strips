@@ -2,11 +2,11 @@ Initial state: ATLOCATION(LH)
 Goal state: TBREWTEA(LK,C,K,W,T)
 Actions:
             MMBREWTEA(LK,C,K,W,T)
-            Preconditions: ATLOCATION(LK),TBOILWATER(K,W,LK),ISIN(T,C),ISIN(W,C) 
+            Preconditions: ATLOCATION(LK),TBOILWATER(K,W,LK),INHAND(T),ISIN(T,C),ISIN(W,C) 
             Postconditions: TBREWTEA(LK,C,K,W,T) 
 
             MMBOILWATER(K,W,LK)
-            Preconditions: INHAND(K),ISIN(W,K),HOT(K)
+            Preconditions: INHAND(W),ISIN(W,K),HOT(K),INHAND(K) 
             Postconditions: TBOILWATER(K,W,LK) 
 
             GETTO(LK,LZ)
