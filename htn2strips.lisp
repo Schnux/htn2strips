@@ -145,12 +145,12 @@
     (loop for elem in strips-action do
             (cond
              ((eq name (strips-action-name elem)) (setq res (strips-action-postconditions elem)))))
-    (cond ((eq (first res) 'AND) (first (first (find-not-negative-conditions res))))
+    (cond ((eq (first res) 'AND) (first (first (find-postive-conditions res))))
           ((eq 0 (length res)) (add-prefix-to-element "T" (list name)))
           (T (first res)))))
 
 ;; Finds postive conditions in a list of conditions and returns it
-(defun find-not-negative-conditions (cond)
+(defun find-postive-conditions (cond)
   (let ((res))
     (loop for postcond in (cdr cond) do
             (if (not (eq (first postcond) '!))
@@ -239,7 +239,6 @@
 
 (defun add-prefix-to-element (prefix element)
   (first (string-to-list (concatenate 'String prefix (write-to-string (first element))))))
-
 
 ;; https://stackoverflow.com/questions/7459501/how-to-convert-a-string-to-list-using-clisp/13832673
 ;Turns a string into a stream so it can be read into a list
