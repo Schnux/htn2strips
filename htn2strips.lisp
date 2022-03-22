@@ -97,10 +97,8 @@
         (make-strips-action
          :parameters (remove-item-and-next '- (parse-it :parameters element))
          :name (add-prefix-to-element "M" (list (remove-hyphen (second element))))
-         :preconditions (substitute-name (remove-hyphen (parse-it :ordered-subtasks element)) strips-action))))
-
-:postconditions
-(remove-hyphen (parse-it :task element))
+         :preconditions (substitute-name (remove-hyphen (parse-it :ordered-subtasks element)) strips-action)
+         :postconditions (remove-hyphen (parse-it :task element)))))
 
 (defun parse-tasks (htn-tasks)
   "Takes htn-task and turns it into a strips-task struct"
