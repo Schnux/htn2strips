@@ -35,6 +35,7 @@
         (strips-goal '())
         (domain '())
         (problem '()))
+
     (declare (ignorable strips-task))
     ;; reader makro to remove '?'
     (let ((*readtable* (copy-readtable)))
@@ -96,8 +97,10 @@
         (make-strips-action
          :parameters (remove-item-and-next '- (parse-it :parameters element))
          :name (add-prefix-to-element "M" (list (remove-hyphen (second element))))
-         :postconditions (remove-hyphen (parse-it :task element))
          :preconditions (substitute-name (remove-hyphen (parse-it :ordered-subtasks element)) strips-action))))
+
+:postconditions
+(remove-hyphen (parse-it :task element))
 
 (defun parse-tasks (htn-tasks)
   "Takes htn-task and turns it into a strips-task struct"
