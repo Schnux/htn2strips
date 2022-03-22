@@ -3,15 +3,15 @@ Goal state: TGETTO(TRUCK0,CITYLOC0)
 Actions:
             MMDRIVETO(V,L1,L2)
             Preconditions: AT(V,L1,L2) 
-            Postconditions: TGETTO(V,L2) 
+            Postconditions: GETTO(V,L2) 
 
             MMDRIVETOVIA(V,L2,L3)
             Preconditions: TGETTO(V,L2),AT(V,L2,L3) 
-            Postconditions: TGETTO(V,L3) 
+            Postconditions: GETTO(V,L3) 
 
             MMIAMTHERE(V,L)
             Preconditions: ENOOP(V,L) 
-            Postconditions: TGETTO(V,L) 
+            Postconditions: GETTO(V,L) 
 
             DRIVE(V,L1,L2)
             Preconditions: AT(V,L1),ROAD(L1,L2) 

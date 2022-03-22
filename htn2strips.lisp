@@ -6,12 +6,6 @@
   postconditions
   parameters)
 
-(defstruct strips-method
-  name
-  postconditions
-  subtasks
-  parameters)
-
 (defstruct strips-task
   name
   parameters)
@@ -36,7 +30,6 @@
         (htn-init '())
         (htn-goal '())
         (strips-task '())
-        (strips-method '())
         (strips-action '())
         (strips-init '())
         (strips-goal '())
@@ -59,12 +52,12 @@
 
     ;transfrom htn to strips
     (setq strips-action (parse-actions htn-action))
-    (setq strips-method (parse-methods htn-method strips-action))
+    (setq strips-action (append (parse-methods htn-method strips-action) strips-action))
     (setq strips-task (parse-tasks htn-task))
     (setq strips-init (parse-init htn-init))
     (setq strips-goal (parse-goal htn-goal))
 
-    (write-file strips-method strips-init strips-goal strips-action))
+    (write-file strips-init strips-goal strips-action))
 
   "Complete")
 
@@ -100,11 +93,11 @@
   "Takes htn-method and turns it into a strips-method struct"
   (loop for element in htn-methods
         collect
-        (make-strips-method
+        (make-strips-action
          :parameters (remove-item-and-next '- (parse-it :parameters element))
          :name (add-prefix-to-element "M" (list (remove-hyphen (second element))))
          :postconditions (remove-hyphen (parse-it :task element))
-         :subtasks (change-name (remove-hyphen (parse-it :ordered-subtasks element)) strips-action))))
+         :preconditions (substitute-name (remove-hyphen (parse-it :ordered-subtasks element)) strips-action))))
 
 (defun parse-tasks (htn-tasks)
   "Takes htn-task and turns it into a strips-task struct"
@@ -130,7 +123,7 @@
 
 
 ;; substitutes the Action- or Taskname with its first postive postcondition
-(defun change-name (precon-list strips-action)
+(defun substitute-name (precon-list strips-action)
   (let ((res (list 'AND)))
     (cond
      ((not (eq (first precon-list) 'AND)) (setq precon-list (append res (list precon-list)))))
@@ -175,7 +168,7 @@
         (T (cons (first list)
                  (remove-item-and-next item (rest list))))))
 
-(defun write-file (strips-method strips-init strips-goal strips-action)
+(defun write-file (strips-init strips-goal strips-action)
   "Formats and writes the resulting data to output.txt"
   (with-open-file (file #P"output.txt" :direction :output
                         :if-exists :supersede
@@ -199,15 +192,6 @@
     (fresh-line file)
     (format file "Actions:")
     (fresh-line file)
-    ;;methods
-    (loop for method in strips-method do
-            (format file "~12,0T~a" (strips-method-name method))
-            (format file "(~{~a~^,~})~%" (strips-method-parameters method))
-            (format file "~12,0TPreconditions: ")
-            (format file "~a ~%" (process-conditions (strips-method-subtasks method) (make-array 0 :element-type 'character :fill-pointer 0)))
-            (format file "~12,0TPostconditions: ")
-            (format file "T~a ~%" (process-conditions (strips-method-postconditions method) (make-array 0 :element-type 'character :fill-pointer 0)))
-            (terpri file))
     ;;actions
     (loop for action in strips-action do
             (format file "~12,0T~a" (strips-action-name action))
