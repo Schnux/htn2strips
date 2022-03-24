@@ -6,7 +6,7 @@ Actions:
             Postconditions: TBREWTEA(LK,C,K,W,T) 
 
             MMBOILWATER(K,W,LK)
-            Preconditions: INHAND(W),ISIN(W,K),HOT(K),INHAND(K) 
+            Preconditions: INHAND(K),INHAND(W),ISIN(W,K),HOT(K) 
             Postconditions: TBOILWATER(K,W,LK) 
 
             GETTO(LK,LZ)
@@ -28,4 +28,3 @@ Actions:
             POURWATER(W,C,K)
             Preconditions: HOT(W),INHAND(K) 
             Postconditions: ISIN(W,C) 
-

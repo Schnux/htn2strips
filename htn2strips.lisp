@@ -98,7 +98,7 @@
          :parameters (remove-item-and-next '- (parse-it :parameters element))
          :name (add-prefix-to-element "M" (list (remove-hyphen (second element))))
          :preconditions (substitute-name (remove-hyphen (parse-it :ordered-subtasks element)) strips-action)
-         :postconditions (remove-hyphen (parse-it :task element)))))
+         :postconditions (append (list (add-prefix-to-element "T" (list (remove-hyphen (first (parse-it :task element)))))) (cdr (remove-hyphen (parse-it :task element)))))))
 
 (defun parse-tasks (htn-tasks)
   "Takes htn-task and turns it into a strips-task struct"
@@ -133,7 +133,7 @@
     res))
 
 
-;; Finds and returns the corispondent postcondition name of the Action/Task name
+;; Finds and returns the correspondent postcondition name of the Action/Task name
 (defun find-postcondition-name (name strips-action)
   (let ((res))
     (loop for elem in strips-action do
