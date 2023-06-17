@@ -1,0 +1,31 @@
+Initial state: ATLOCATION(LH)
+Goal state: TBREWTEA(LK,C,K,W,T)
+Actions:
+            MMBREWTEA(LK,C,K,W,T)
+            Preconditions: ATLOCATION(LK),TBOILWATER(K,W,LK),ISIN(T,C),ISIN(W,C) 
+            Postconditions: TBREWTEA(LK,C,K,W,T) 
+
+            MMBOILWATER(K,W,LK)
+            Preconditions: INHAND(K),ISIN(W,K),HOT(W)
+            Postconditions: TBOILWATER(K,W,LK) 
+
+            GETTO(LK,LZ)
+            Preconditions: !ATLOCATION(LK),ATLOCATION(LZ) 
+            Postconditions: ATLOCATION(LK),!ATLOCATION(LZ) 
+
+            PICKUP(O1,LK)
+            Preconditions: !INHAND(O1),ATLOCATION(LK) 
+            Postconditions: INHAND(O1) 
+
+            TURNON(K,W)
+            Preconditions: ISIN(W,K) 
+            Postconditions: HOT(W) 
+
+            PUTIN(O1,O2)
+            Preconditions: !ISIN(O1,O2),INHAND(O1) 
+            Postconditions: ISIN(O1,O2),!INHAND(O1) 
+
+            POURWATER(W,C,K)
+            Preconditions: HOT(W),INHAND(K) 
+            Postconditions: ISIN(W,C) 
+
