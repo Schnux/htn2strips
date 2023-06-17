@@ -1,0 +1,31 @@
+Initial state: 	Atlocation(hall)
+Goal state: 	Tbrewtea(kitchen,cup,kettle,water,tea)
+    
+Actions:
+    			Mbrewtea(lk,c,k,w,t)
+    			Preconditions: Atlocation(lk), Tboilwater(k,w,lk), Isin(t,c), Isin(w,c)
+    			Postconditions: Tbrewtea(lk,c,k,w,t)
+        
+				Mboilwater(k,w,lk)
+				Preconditions: Inhand(k), Isin(w,k), Hot(w)
+				Postconditions: Tboilwater(k,w,lk)
+        
+				Getto(lk,lz)
+				Preconditions: !Atlocation(lk), Atlocation(lz)
+				Postconditions: Atlocation(lk), !Atlocation(lz)
+					
+				Pickup(o1,lk)
+				Preconditions: !Inhand(o1), Atlocation(lk)
+				Postconditions: Inhand(o1)
+					
+				Turnon(k,w)
+				Preconditions: Isin(w,k)
+				Postconditions: Hot(w)
+					
+				Putin(o1,o2)
+				Preconditions: !Isin(o1,o2), Inhand(o1)
+				Postconditions: Isin(o1,o2), !Inhand(o1)
+					
+				Pourwater(w,c,k)
+				Preconditions: Hot(w), Inhand(k)
+				Postconditions: Isin(w,c)
